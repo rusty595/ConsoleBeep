@@ -105,7 +105,7 @@ namespace SoundLib
             }
         }
 
-        public enum TrackName { SMBDie, SMBWin, NSMBBGM, SMDDie, SMDWin, SMDBGM, ReconstructingMoreScience, YourPreciousMoon, MagicRoundabout, AllStar, Stop }
+        public enum TrackName { SMBDie, SMBWin, NSMBBGM, SMDDie, SMDWin, SMDBGM, ReconstructingMoreScience, YourPreciousMoon, MagicRoundabout, AllStar, Umaru, Stop }
 
         public static void musicSMBDie() { float initTempo = tempo; tempo = 600.0f; Beep("B3", 4); Beep("F4", 2); Beep("F4", 4); Beep("F4", 3); Beep("E4", 3); Beep("D4", 3); Beep("C4", 4); Beep("E3", 2); Beep("E3", 4); Beep("C3", 2); tempo = initTempo; }
         public static void musicSMBWin() { float initTempo = tempo; tempo = 600.0f; Beep("G2", 3); Beep("C3", 3); Beep("E3", 3); Beep("G3", 3); Beep("C4", 3); Beep("E4", 3); Beep("G4", 1); Beep("E4", 1); Beep("G#2", 3); Beep("C3", 3); Beep("D#3", 3); Beep("G#3", 3); Beep("C4", 3); Beep("D#4", 3); Beep("G#4", 1); Beep("D#4", 1); Beep("A#2", 3); Beep("D3", 3); Beep("F3", 3); Beep("A#3", 3); Beep("D4", 3); Beep("F4", 3); Beep("A#4", 1); Beep("A#4", 3); Beep("A#4", 3); Beep("A#4", 3); Beep("C5", 0.5f); tempo = initTempo; }
@@ -232,6 +232,63 @@ namespace SoundLib
                 Beep("B4"); Beep("B4", 2); Beep("B4", 2); if (b0<1) Beep("G4", 0.5f);
             }
             Beep("G4"); Beep("G4"); Beep("C5", 0.2f);
+            tempo = initTempo;
+        }
+        public static void musicUMR()
+        {
+            float initTempo = tempo; tempo = 600.0f;
+            Beep("F#", 4); Beep("F#", 4); Beep("F#", 2); Beep("G", 2);
+            Beep("A", 1.666f); Beep("A", 1.666f); Beep("B", 2); Beep("A", 2); Beep("G", 2); Beep("F#", 2); Beep("G", 2);
+            Beep("A", 2); Beep("A", 4); Beep("A", 1.666f); Beep("B", 2); Beep("A"); Beep("R", 2); Beep("A", 2);
+            Beep("D"); Beep("R", 2); Beep("A", 2); Beep("D"); Beep("R", 2); Beep("A", 2);
+            Beep("B2", 2); Beep("C#", 2); Beep("D", 2); Beep("F#", 2); Beep("F#", 1.666f); Beep("E", 4); Beep("E");
+            Beep("A", 1.666f); Beep("A", 1.666f); Beep("B", 2); Beep("A", 2); Beep("G", 2); Beep("F#", 2); Beep("G", 2);
+            Beep("A", 1.666f); Beep("D4", 1.666f); Beep("C#4", 2); Beep("D4"); Beep("R", 2); Beep("D", 2);
+            Beep("B2", 2); Beep("C#", 2); Beep("D", 2); Beep("F#", 2); Beep("E", 0.666f); Beep("D", 2);
+            Beep("D", 0.5f); Beep("D5"); Beep("D5"); Beep("D5"); Beep("D5"); Beep("D5", 4); Beep("F#5", 2); Beep("F#5", 4); Beep("E5", 2); Beep("D5", 2); Beep("D5"); Beep("D5"); Beep("D5"); Beep("D5"); Beep("G4", 1.666f); Beep("F#4", 1.666f); Beep("G4", 2); Beep("A4"); Beep();
+
+            Beep("D", 1.666f); Beep("D", 1.666f); Beep("C#", 2); Beep("D"); Beep("R", 2); Beep("D", 4); Beep("E", 4);
+            Beep("F#", 1.666f); Beep("E", 1.666f); Beep("D", 2); Beep("BELL"); Beep("E"); Beep("BELL"); Beep("R", 2); Beep("D", 4); Beep("E", 4);
+            Beep("G", 1.666f); Beep("G", 1.666f); Beep("F#", 2); Beep("G", 2); Beep("F#", 2); Beep("E", 2); Beep("F#", 2);
+            Beep("E", 1.666f); Beep("E", 1.666f); Beep("F#", 2); Beep("F#"); Beep("R", 2); Beep("B2", 4); Beep("C#", 4);
+            Beep("D", 1.666f); Beep("BELL"); Beep("D", 1.666f); Beep("BELL"); Beep("C#", 2); Beep("BELL"); Beep("D"); Beep("BELL"); Beep("R", 2); Beep("D", 4); Beep("E", 4);
+            Beep("F#", 1.666f); Beep("E", 1.666f); Beep("D", 2); Beep("E"); Beep("R", 2); Beep("D", 4); Beep("E", 4);
+            Beep("G", 1.666f); Beep("G", 1.666f); Beep("F#", 2); Beep("G", 2); Beep("F#", 2); Beep("E", 2); Beep("F#", 2);
+            Beep("D"); Beep("A"); Beep("D"); Beep("B", 8); Beep("A", 8); Beep("B", 8); Beep("A", 8); Beep("B", 8); Beep("A", 8); Beep("G", 4);
+            //Bar 26
+            Beep("F#", 1.666f); Beep("F#", 4); Beep("F#", 4); Beep("F#", 4); Beep("G", 2); Beep("F#", 2); Beep("E", 2);
+            Beep("F#", 4); Beep("G", 4); Beep("F#", 4); Beep("G", 4); Beep("F#", 4); Beep("D", 4); Beep("B2"); Beep("B2", 2);
+            Beep("F#", 1.666f); Beep("F#", 4); Beep("F#", 4); Beep("F#", 4); Beep("G", 2); Beep("F#", 2); Beep("E", 2);
+            Beep("E", 1.666f); Beep("E", 4); Beep("E", 2); Beep("E", 2); Beep("D", 2); Beep("E", 2);
+            Beep("F#", 1.666f); Beep("G", 4); Beep("F#", 4); Beep("G", 4); Beep("F#"); Beep("D", 4); Beep("E", 4);
+            Beep("F#", 1.666f); Beep("F#", 4); Beep("F#", 2); Beep("G", 2); Beep("F#", 2); Beep("E", 2);
+            //Bar 31
+            Beep("F#", 4); Beep("G", 4); Beep("F#", 4); Beep("G", 4); Beep("F#", 4); Beep("C#4", 4);
+            Beep("B"); Beep("B", 2); Beep("A", 2);
+            Beep("G", 1.666f); Beep("G", 1.666f); Beep("G", 2); Beep("A", 2); Beep("G", 2); Beep("F#", 2); Beep("G", 2);
+            Beep("A", 1.666f); Beep("F#", 1.666f); Beep("A", 2); Beep("B"); Beep("B", 2); Beep("A", 2);
+            Beep("G", 0.666f); Beep("G"); Beep("G", 2); Beep("F#", 2); Beep("G", 2);
+            Beep("A", 0.5f);
+            
+            Beep("R", 2);
+            
+            Beep("F#", 4); Beep("F#", 4); Beep("F#", 2); Beep("G", 2);
+            Beep("A", 1.666f); Beep("A", 2); Beep("A", 4); Beep("B", 2); Beep("A", 2); Beep("G", 2); Beep("F#", 2); Beep("G", 2);
+            Beep("A", 1.666f); Beep("A", 1.666f); Beep("B", 2); Beep("A"); Beep("R", 2); Beep("A", 2);
+            Beep("D"); Beep("R", 2); Beep("A", 2); Beep("D"); Beep("R", 2); Beep("D", 2);
+            Beep("B2", 2); Beep("C#", 2); Beep("D", 2); Beep("F#", 2); Beep("F#", 1.666f); Beep("E", 4); Beep("E");
+            Beep("A", 1.666f); Beep("A", 1.666f); Beep("B", 2); Beep("A", 2); Beep("G", 2); Beep("F#", 2); Beep("G", 2);
+            Beep("A", 1.666f); Beep("D4", 1.666f); Beep("C#4", 2); Beep("D4"); Beep("R", 2); Beep("A", 2);
+            Beep("D"); Beep("R", 2); Beep("A", 2); Beep("D"); Beep("R", 2); Beep("D", 2);
+            Beep("B2", 2); Beep("C#", 2); Beep("D", 2); Beep("F#", 2); Beep("F#"); Beep("E", 2); Beep("D", 2);
+            Beep("D"); Beep("R", 2); Beep("D", 2); Beep("C#", 2); Beep("E", 2); Beep("B", 2);
+            Beep("A", 1.666f); Beep("F#", 1.666f); Beep("A", 2); Beep("D4"); Beep("R", 2); Beep("D", 2);
+            Beep("F#", 2); Beep("G", 2); Beep("F#", 2); Beep("G", 2); Beep("A", 2); Beep("D", 2); Beep("E", 2); Beep("E", 2);
+            Beep("D", 0.5f); Beep("R", 2); Beep("C#5", 2); Beep("D5", 2); Beep("E5", 2);
+            Beep("F#5", 4); Beep("G5", 4); Beep("F#5"); Beep("D5", 0.666f); Beep();
+            //Bar 50
+            Beep("F#4"); Beep("G4"); Beep("G#4"); Beep("A4"); Beep("A#4"); Beep("B4"); Beep("C5"); Beep("C#5"); Beep("D5", 0.5f); Beep("R", 0.5f);
+            Beep("D", 1.666f); Beep("C", 1.666f); Beep("C#", 2); Beep("D");
             tempo = initTempo;
         }
 
@@ -1433,6 +1490,9 @@ namespace SoundLib
                     break;
                 case TrackName.AllStar:
                     t = new Thread(new ThreadStart(musicAllStar));
+                    break;
+                case TrackName.Umaru:
+                    t = new Thread(new ThreadStart(musicUMR));
                     break;
                 default:
                     t = new Thread(() => Beep());

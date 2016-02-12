@@ -116,7 +116,7 @@ public:
 		Beep(n, l);
     }
 
-	enum TrackName { SMBDie, SMBWin, NSMBBGM, SMDDie, SMDWin, SMDBGM, ReconstructingMoreScience, YourPreciousMoon, MagicRoundabout, AllStar, Stop };
+	enum TrackName { SMBDie, SMBWin, NSMBBGM, SMDDie, SMDWin, SMDBGM, ReconstructingMoreScience, YourPreciousMoon, MagicRoundabout, AllStar, Umaru, Stop };
 
 	static DWORD WINAPI musicSMBDie(LPVOID lpParam = 0) { float initTempo = tempo; tempo = 600.0f; slBeep(B3, 4); slBeep(F4, 2); slBeep(F4, 4); slBeep(F4, 3); slBeep(E4, 3); slBeep(D4, 3); slBeep(C4, 4); slBeep(E3, 2); slBeep(E3, 4); slBeep(C3, 2); tempo = initTempo; return 0; }
 	
@@ -249,6 +249,65 @@ public:
             tempo = initTempo;
 			return 0;
         }
+	static DWORD WINAPI musicUMR(LPVOID lpParam = 0)
+	{
+		float initTempo = tempo; tempo = 600.0f;
+		slBeep(Fsharp, 4); slBeep(Fsharp, 4); slBeep(Fsharp, 2); slBeep(G, 2);
+		slBeep(A, 1.666f); slBeep(A, 1.666f); slBeep(B, 2); slBeep(A, 2); slBeep(G, 2); slBeep(Fsharp, 2); slBeep(G, 2);
+		slBeep(A, 2); slBeep(A, 4); slBeep(A, 1.666f); slBeep(B, 2); slBeep(A); slBeep(R, 2); slBeep(A, 2);
+		slBeep(D); slBeep(R, 2); slBeep(A, 2); slBeep(D); slBeep(R, 2); slBeep(A, 2);
+		slBeep(B2, 2); slBeep(Csharp, 2); slBeep(D, 2); slBeep(Fsharp, 2); slBeep(Fsharp, 1.666f); slBeep(E, 4); slBeep(E);
+		slBeep(A, 1.666f); slBeep(A, 1.666f); slBeep(B, 2); slBeep(A, 2); slBeep(G, 2); slBeep(Fsharp, 2); slBeep(G, 2);
+		slBeep(A, 1.666f); slBeep(D4, 1.666f); slBeep(Csharp4, 2); slBeep(D4); slBeep(R, 2); slBeep(D, 2);
+		slBeep(B2, 2); slBeep(Csharp, 2); slBeep(D, 2); slBeep(Fsharp, 2); slBeep(E, 0.666f); slBeep(D, 2);
+		slBeep(D, 0.5f); slBeep(D5); slBeep(D5); slBeep(D5); slBeep(D5); slBeep(D5, 4); slBeep(Fsharp5, 2); slBeep(Fsharp5, 4); slBeep(E5, 2); slBeep(D5, 2); slBeep(D5); slBeep(D5); slBeep(D5); slBeep(D5); slBeep(G4, 1.666f); slBeep(Fsharp4, 1.666f); slBeep(G4, 2); slBeep(A4); slBeep();
+
+		slBeep(D, 1.666f); slBeep(D, 1.666f); slBeep(Csharp, 2); slBeep(D); slBeep(R, 2); slBeep(D, 4); slBeep(E, 4);
+		slBeep(Fsharp, 1.666f); slBeep(E, 1.666f); slBeep(D, 2); slBeep(BELL); slBeep(E); slBeep(BELL); slBeep(R, 2); slBeep(D, 4); slBeep(E, 4);
+		slBeep(G, 1.666f); slBeep(G, 1.666f); slBeep(Fsharp, 2); slBeep(G, 2); slBeep(Fsharp, 2); slBeep(E, 2); slBeep(Fsharp, 2);
+		slBeep(E, 1.666f); slBeep(E, 1.666f); slBeep(Fsharp, 2); slBeep(Fsharp); slBeep(R, 2); slBeep(B2, 4); slBeep(Csharp, 4);
+		slBeep(D, 1.666f); slBeep(BELL); slBeep(D, 1.666f); slBeep(BELL); slBeep(Csharp, 2); slBeep(BELL); slBeep(D); slBeep(BELL); slBeep(R, 2); slBeep(D, 4); slBeep(E, 4);
+		slBeep(Fsharp, 1.666f); slBeep(E, 1.666f); slBeep(D, 2); slBeep(E); slBeep(R, 2); slBeep(D, 4); slBeep(E, 4);
+		slBeep(G, 1.666f); slBeep(G, 1.666f); slBeep(Fsharp, 2); slBeep(G, 2); slBeep(Fsharp, 2); slBeep(E, 2); slBeep(Fsharp, 2);
+		slBeep(D); slBeep(A); slBeep(D); slBeep(B, 8); slBeep(A, 8); slBeep(B, 8); slBeep(A, 8); slBeep(B, 8); slBeep(A, 8); slBeep(G, 4);
+		//Bar 26
+		slBeep(Fsharp, 1.666f); slBeep(Fsharp, 4); slBeep(Fsharp, 4); slBeep(Fsharp, 4); slBeep(G, 2); slBeep(Fsharp, 2); slBeep(E, 2);
+		slBeep(Fsharp, 4); slBeep(G, 4); slBeep(Fsharp, 4); slBeep(G, 4); slBeep(Fsharp, 4); slBeep(D, 4); slBeep(B2); slBeep(B2, 2);
+		slBeep(Fsharp, 1.666f); slBeep(Fsharp, 4); slBeep(Fsharp, 4); slBeep(Fsharp, 4); slBeep(G, 2); slBeep(Fsharp, 2); slBeep(E, 2);
+		slBeep(E, 1.666f); slBeep(E, 4); slBeep(E, 2); slBeep(E, 2); slBeep(D, 2); slBeep(E, 2);
+		slBeep(Fsharp, 1.666f); slBeep(G, 4); slBeep(Fsharp, 4); slBeep(G, 4); slBeep(Fsharp); slBeep(D, 4); slBeep(E, 4);
+		slBeep(Fsharp, 1.666f); slBeep(Fsharp, 4); slBeep(Fsharp, 2); slBeep(G, 2); slBeep(Fsharp, 2); slBeep(E, 2);
+		//Bar 31
+		slBeep(Fsharp, 4); slBeep(G, 4); slBeep(Fsharp, 4); slBeep(G, 4); slBeep(Fsharp, 4); slBeep(Csharp4, 4);
+		slBeep(B); slBeep(B, 2); slBeep(A, 2);
+		slBeep(G, 1.666f); slBeep(G, 1.666f); slBeep(G, 2); slBeep(A, 2); slBeep(G, 2); slBeep(Fsharp, 2); slBeep(G, 2);
+		slBeep(A, 1.666f); slBeep(Fsharp, 1.666f); slBeep(A, 2); slBeep(B); slBeep(B, 2); slBeep(A, 2);
+		slBeep(G, 0.666f); slBeep(G); slBeep(G, 2); slBeep(Fsharp, 2); slBeep(G, 2);
+		slBeep(A, 0.5f);
+
+		slBeep(R, 2);
+
+		slBeep(Fsharp, 4); slBeep(Fsharp, 4); slBeep(Fsharp, 2); slBeep(G, 2);
+		slBeep(A, 1.666f); slBeep(A, 2); slBeep(A, 4); slBeep(B, 2); slBeep(A, 2); slBeep(G, 2); slBeep(Fsharp, 2); slBeep(G, 2);
+		slBeep(A, 1.666f); slBeep(A, 1.666f); slBeep(B, 2); slBeep(A); slBeep(R, 2); slBeep(A, 2);
+		slBeep(D); slBeep(R, 2); slBeep(A, 2); slBeep(D); slBeep(R, 2); slBeep(D, 2);
+		slBeep(B2, 2); slBeep(Csharp, 2); slBeep(D, 2); slBeep(Fsharp, 2); slBeep(Fsharp, 1.666f); slBeep(E, 4); slBeep(E);
+		slBeep(A, 1.666f); slBeep(A, 1.666f); slBeep(B, 2); slBeep(A, 2); slBeep(G, 2); slBeep(Fsharp, 2); slBeep(G, 2);
+		slBeep(A, 1.666f); slBeep(D4, 1.666f); slBeep(Csharp4, 2); slBeep(D4); slBeep(R, 2); slBeep(A, 2);
+		slBeep(D); slBeep(R, 2); slBeep(A, 2); slBeep(D); slBeep(R, 2); slBeep(D, 2);
+		slBeep(B2, 2); slBeep(Csharp, 2); slBeep(D, 2); slBeep(Fsharp, 2); slBeep(Fsharp); slBeep(E, 2); slBeep(D, 2);
+		slBeep(D); slBeep(R, 2); slBeep(D, 2); slBeep(Csharp, 2); slBeep(E, 2); slBeep(B, 2);
+		slBeep(A, 1.666f); slBeep(Fsharp, 1.666f); slBeep(A, 2); slBeep(D4); slBeep(R, 2); slBeep(D, 2);
+		slBeep(Fsharp, 2); slBeep(G, 2); slBeep(Fsharp, 2); slBeep(G, 2); slBeep(A, 2); slBeep(D, 2); slBeep(E, 2); slBeep(E, 2);
+		slBeep(D, 0.5f); slBeep(R, 2); slBeep(Csharp5, 2); slBeep(D5, 2); slBeep(E5, 2);
+		slBeep(Fsharp5, 4); slBeep(G5, 4); slBeep(Fsharp5); slBeep(D5, 0.666f); slBeep();
+		//Bar 50
+		slBeep(Fsharp4); slBeep(G4); slBeep(Gsharp4); slBeep(A4); slBeep(Asharp4); slBeep(B4); slBeep(C5); slBeep(Csharp5); slBeep(D5, 0.5f); slBeep(R, 0.5f);
+		slBeep(D, 1.666f); slBeep(C, 1.666f); slBeep(Csharp, 2); slBeep(D);
+		tempo = initTempo;
+		return 0;
+	}
+
 
 	static DWORD WINAPI musicAllStar(LPVOID lpParam = 0)
         {
@@ -1451,6 +1510,9 @@ public:
                 case AllStar:
 					t0 = CreateThread(NULL, 0, musicAllStar, 0, 0, t);
                     break;
+				case Umaru:
+					t0 = CreateThread(NULL, 0, musicUMR, 0, 0, t);
+					break;
                 default:
 					TerminateThread(t0, 0);
                     break;
