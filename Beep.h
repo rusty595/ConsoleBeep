@@ -116,7 +116,7 @@ public:
 		Beep(n, l);
     }
 
-	enum TrackName { SMBDie, SMBWin, NSMBBGM, SMDDie, SMDWin, Sonic1GHZ, ReconstructingMoreScience, YourPreciousMoon, MagicRoundabout, AllStar, Umaru, Futurama, Stop };
+	enum TrackName { SMBDie, SMBWin, NSMBBGM, SMDDie, SMDWin, Sonic1GHZ, ReconstructingMoreScience, YourPreciousMoon, MagicRoundabout, AllStar, Umaru, Futurama, PinkPanther, Stop };
 
 	static DWORD WINAPI musicSMBDie(LPVOID lpParam = 0) { float initTempo = tempo; tempo = 600.0f; slBeep(B3, 4); slBeep(F4, 2); slBeep(F4, 4); slBeep(F4, 3); slBeep(E4, 3); slBeep(D4, 3); slBeep(C4, 4); slBeep(E3, 2); slBeep(E3, 4); slBeep(C3, 2); tempo = initTempo; return 0; }
 	
@@ -360,6 +360,35 @@ public:
 		tempo = initTempo;
 		return 0;
 	}
+	static DWORD WINAPI musicPP(LPVOID lpParam = 0)
+	{
+		float initTempo = tempo; tempo = 660.0f;
+		slBeep(Gsharp2, 4); slBeep(A2, 1.666f); slBeep(Asharp2, 4); slBeep(B2, 0.2f);
+		slBeep(Gsharp2, 4); slBeep(A2, 1.666f); slBeep(Asharp2, 4); slBeep(B2, 0.2f);
+		slBeep(Asharp2, 4); slBeep(A2, 1.666f); slBeep(Gsharp2, 4); slBeep(G2, 0.2f);
+		slBeep(Gsharp2, 4); slBeep(A2, 1.666f); slBeep(Asharp2, 4); slBeep(B2, 0.2f);
+		slBeep(R, 1.666f); slBeep(Dsharp, 4);
+		while (true)
+		{
+			slBeep(E); slBeep(R, 1.666f); slBeep(Fsharp, 4); slBeep(G); slBeep(R, 1.666f); slBeep(Dsharp, 4);
+			slBeep(E, 1.666f); slBeep(Fsharp, 4); slBeep(G, 1.666f); slBeep(C4, 4); slBeep(B, 1.666f); slBeep(E, 4); slBeep(G, 1.666f); slBeep(B, 4);
+			slBeep(Asharp, 0.421f); slBeep(A, 2.666f); slBeep(G, 4); slBeep(E, 2.666f); slBeep(D, 2.666f); slBeep(E, 0.308f); slBeep(R, 1.666f); slBeep(Dsharp, 4);
+			slBeep(E); slBeep(R, 1.666f); slBeep(Fsharp, 4); slBeep(G); slBeep(R, 1.666f); slBeep(Dsharp, 4);
+			slBeep(E, 1.666f); slBeep(Fsharp, 4); slBeep(G, 1.666f); slBeep(C4, 4); slBeep(B, 1.666f); slBeep(E, 4); slBeep(G, 1.666f); slBeep(E4, 4);
+			slBeep(Dsharp4, 0.129f); slBeep(Dsharp, 4);
+			//bar 18
+			slBeep(E, 0.571f); slBeep(Fsharp, 4); slBeep(G, 0.571f); slBeep(Dsharp, 4);
+			slBeep(E, 1.666f); slBeep(Fsharp, 4); slBeep(G, 1.666f); slBeep(C4, 4); slBeep(B, 1.666f); slBeep(E, 4); slBeep(G, 1.666f); slBeep(B, 4);
+			slBeep(Asharp, 0.421f); slBeep(A, 2.666f); slBeep(G, 4); slBeep(E, 2.666f); slBeep(D, 2.666f); slBeep(E, 0.444f); slBeep(R, 0.333f);
+			slBeep(E4, 1.666f); slBeep(D4, 4); slBeep(B, 1.666f); slBeep(A, 4); slBeep(G, 1.666f); slBeep(E, 4);
+			for (byte b0 = 0; b0 < 4; b0++)
+				slBeep(Asharp, 1.666f); slBeep(A, 4);
+			slBeep(G, 2.666f); slBeep(E, 2.666f); slBeep(D, 4); slBeep(E, 2); slBeep(E, 0.222f); slBeep(R, 0.5f);
+			slBeep(G, 2.666f); slBeep(E, 2.666f); slBeep(D, 4); slBeep(E, 2); slBeep(E, 0.222f); slBeep(R, 0.5f);
+			slBeep(G, 2.666f); slBeep(E, 2.666f); slBeep(D, 4); slBeep(E, 2); slBeep(E, 0.222f); slBeep(R, 0.571f); slBeep(Dsharp, 4);
+		}
+	}
+
 
 	static DWORD WINAPI musicAllStar(LPVOID lpParam = 0)
         {
@@ -1567,6 +1596,9 @@ public:
 					break;
 				case Futurama:
 					t0 = CreateThread(NULL, 0, musicFut, 0, 0, t);
+					break;
+				case PinkPanther:
+					t0 = CreateThread(NULL, 0, musicPP, 0, 0, t);
 					break;
                 default:
 					TerminateThread(t0, 0);

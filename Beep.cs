@@ -105,7 +105,7 @@ namespace SoundLib
             }
         }
 
-        public enum TrackName { SMBDie, SMBWin, NSMBBGM, SMDDie, SMDWin, Sonic1GHZ, ReconstructingMoreScience, YourPreciousMoon, MagicRoundabout, AllStar, Umaru, Futurama, Stop }
+        public enum TrackName { SMBDie, SMBWin, NSMBBGM, SMDDie, SMDWin, Sonic1GHZ, ReconstructingMoreScience, YourPreciousMoon, MagicRoundabout, AllStar, Umaru, Futurama, PinkPanther, Stop }
 
         public static void musicSMBDie() { float initTempo = tempo; tempo = 600.0f; Beep("B3", 4); Beep("F4", 2); Beep("F4", 4); Beep("F4", 3); Beep("E4", 3); Beep("D4", 3); Beep("C4", 4); Beep("E3", 2); Beep("E3", 4); Beep("C3", 2); tempo = initTempo; }
         public static void musicSMBWin() { float initTempo = tempo; tempo = 600.0f; Beep("G2", 3); Beep("C3", 3); Beep("E3", 3); Beep("G3", 3); Beep("C4", 3); Beep("E4", 3); Beep("G4", 1); Beep("E4", 1); Beep("G#2", 3); Beep("C3", 3); Beep("D#3", 3); Beep("G#3", 3); Beep("C4", 3); Beep("D#4", 3); Beep("G#4", 1); Beep("D#4", 1); Beep("A#2", 3); Beep("D3", 3); Beep("F3", 3); Beep("A#3", 3); Beep("D4", 3); Beep("F4", 3); Beep("A#4", 1); Beep("A#4", 3); Beep("A#4", 3); Beep("A#4", 3); Beep("C5", 0.5f); tempo = initTempo; }
@@ -340,6 +340,34 @@ namespace SoundLib
             Beep("E1", 2); Beep("D2", 2); Beep("E2", 2); Beep("A1"); Beep("D2", 2); Beep("E2", 2); Beep("B1", 2);
 
             Beep("R", 2); Beep("G#4", 4); Beep("G#4", 4); Beep("G#4", 2); Beep("D#4", 2); Beep("D#4", 2); Beep("B3", 2); Beep("B3", 2); Beep("G#3", 2); Beep("BELL"); Beep("R");
+        }
+        public static void musicPP()
+        {
+            float initTempo = tempo; tempo = 660.0f;
+            Beep("G#2", 4); Beep("A2", 1.666f); Beep("A#2", 4); Beep("B2", 0.2f);
+            Beep("G#2", 4); Beep("A2", 1.666f); Beep("A#2", 4); Beep("B2", 0.2f);
+            Beep("A#2", 4); Beep("A2", 1.666f); Beep("G#2", 4); Beep("G2", 0.2f);
+            Beep("G#2", 4); Beep("A2", 1.666f); Beep("A#2", 4); Beep("B2", 0.2f);
+            Beep("R", 1.666f); Beep("D#", 4);
+            while(true)
+            {
+                Beep("E"); Beep("R", 1.666f); Beep("F#", 4); Beep("G"); Beep("R", 1.666f); Beep("D#", 4);
+                Beep("E", 1.666f); Beep("F#", 4); Beep("G", 1.666f); Beep("C4", 4); Beep("B", 1.666f); Beep("E", 4); Beep("G", 1.666f); Beep("B", 4);
+                Beep("A#", 0.421f); Beep("A", 2.666f); Beep("G", 4); Beep("E", 2.666f); Beep("D", 2.666f); Beep("E", 0.308f); Beep("R", 1.666f); Beep("D#", 4);
+                Beep("E"); Beep("R", 1.666f); Beep("F#", 4); Beep("G"); Beep("R", 1.666f); Beep("D#", 4);
+                Beep("E", 1.666f); Beep("F#", 4); Beep("G", 1.666f); Beep("C4", 4); Beep("B", 1.666f); Beep("E", 4); Beep("G", 1.666f); Beep("E4", 4);
+                Beep("D#4", 0.129f); Beep("D#", 4);
+                //bar 18
+                Beep("E", 0.571f); Beep("F#", 4); Beep("G", 0.571f); Beep("D#", 4);
+                Beep("E", 1.666f); Beep("F#", 4); Beep("G", 1.666f); Beep("C4", 4); Beep("B", 1.666f); Beep("E", 4); Beep("G", 1.666f); Beep("B", 4);
+                Beep("A#", 0.421f); Beep("A", 2.666f); Beep("G", 4); Beep("E", 2.666f); Beep("D", 2.666f); Beep("E", 0.444f); Beep("R", 0.333f);
+                Beep("E4", 1.666f); Beep("D4", 4); Beep("B", 1.666f); Beep("A", 4); Beep("G", 1.666f); Beep("E", 4);
+                for (byte b0 = 0; b0 < 4;b0++)
+                    Beep("A#", 1.666f); Beep("A", 4);
+                Beep("G", 2.666f); Beep("E", 2.666f); Beep("D", 4); Beep("E", 2); Beep("E", 0.222f); Beep("R", 0.5f);
+                Beep("G", 2.666f); Beep("E", 2.666f); Beep("D", 4); Beep("E", 2); Beep("E", 0.222f); Beep("R", 0.5f);
+                Beep("G", 2.666f); Beep("E", 2.666f); Beep("D", 4); Beep("E", 2); Beep("E", 0.222f); Beep("R", 0.571f); Beep("D#", 4);
+            }
         }
 
         public static void musicAllStar()
@@ -1546,6 +1574,9 @@ namespace SoundLib
                     break;
                 case TrackName.Futurama:
                     t = new Thread(new ThreadStart(musicFut));
+                    break;
+                case TrackName.PinkPanther:
+                    t = new Thread(new ThreadStart(musicPP));
                     break;
                 default:
                     t = new Thread(() => Beep());
