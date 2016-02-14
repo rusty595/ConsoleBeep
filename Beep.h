@@ -116,7 +116,7 @@ public:
 		Beep(n, l);
     }
 
-	enum TrackName { SMBDie, SMBWin, NSMBBGM, SMDDie, SMDWin, SMDBGM, ReconstructingMoreScience, YourPreciousMoon, MagicRoundabout, AllStar, Umaru, Futurama, Stop };
+	enum TrackName { SMBDie, SMBWin, NSMBBGM, SMDDie, SMDWin, Sonic1GHZ, ReconstructingMoreScience, YourPreciousMoon, MagicRoundabout, AllStar, Umaru, Futurama, Stop };
 
 	static DWORD WINAPI musicSMBDie(LPVOID lpParam = 0) { float initTempo = tempo; tempo = 600.0f; slBeep(B3, 4); slBeep(F4, 2); slBeep(F4, 4); slBeep(F4, 3); slBeep(E4, 3); slBeep(D4, 3); slBeep(C4, 4); slBeep(E3, 2); slBeep(E3, 4); slBeep(C3, 2); tempo = initTempo; return 0; }
 	
@@ -189,6 +189,37 @@ public:
 	static DWORD WINAPI musicSMBDieBass(LPVOID lpParam = 0) { tempo = 600.0f; slBeep(G2, 2); slBeep(R, 4); slBeep(G2, 4); slBeep(G2, 3); slBeep(A2, 3); slBeep(B2, 3); slBeep(C3, 2); slBeep(G2, 2); slBeep(C2, 2); return 0; }
 
 	static DWORD WINAPI musicSMDWin(LPVOID lpParam = 0) { float initTempo = tempo; tempo = 350.0f; slBeep(G3, 2); slBeep(G3, 2); slBeep(C4); slBeep(B3); slBeep(G3, 2); slBeep(G3, 2); slBeep(C4); slBeep(B3); slBeep(G3, 2); slBeep(G3, 2); slBeep(C4); slBeep(B3, 0.5f); slBeep(C5, 2); slBeep(B4, 2); slBeep(G4, 2); slBeep(A4, 0.2f); tempo = initTempo; return 0; }
+	static DWORD WINAPI musicS1GHZ(LPVOID lpParam = 0)
+	{
+		float initTempo = tempo; tempo = 400.0f;
+		slBeep(A4, 4); slBeep(F4, 4); slBeep(A4, 4); slBeep(F4, 4);
+		slBeep(B4, 4); slBeep(G4, 4); slBeep(B4, 4); slBeep(G4, 4);
+		slBeep(C5, 4); slBeep(A4, 4); slBeep(C5, 4); slBeep(A4, 4);
+		slBeep(D5, 4); slBeep(B4, 4); slBeep(D5, 4); slBeep(B4, 4);
+
+		slBeep(B); slBeep(R, 2); slBeep(A, 0.666f); slBeep(B);
+		slBeep(R, 2); slBeep(A, 0.666f); slBeep(B); slBeep(A);
+		slBeep(C4); slBeep(R, 2); slBeep(B, 0.666f); slBeep(A, 0.2f);
+
+		slBeep(A); slBeep(R, 2); slBeep(B, 0.666f); slBeep(C4);
+		slBeep(A); slBeep(R, 2); slBeep(B, 0.666f); slBeep(C4);
+		slBeep(C4); slBeep(R, 2); slBeep(B, 0.154f);
+		while (true)
+		{
+			slBeep(R, 0.5f); slBeep(C4, 2); slBeep(A); slBeep(C4, 2);
+			slBeep(B); slBeep(C4, 2); slBeep(B); slBeep(G, 0.333f); slBeep(G, 2); slBeep(E4, 2); slBeep(D4); slBeep(C4, 2);
+			slBeep(B); slBeep(C4, 2); slBeep(B); slBeep(G, 0.286f); slBeep(C4, 2); slBeep(A); slBeep(C4, 2);
+			slBeep(B); slBeep(C4, 2); slBeep(B); slBeep(G, 0.333f); slBeep(A, 2); slBeep(A, 2); slBeep(F); slBeep(A, 2);
+			slBeep(G); slBeep(A, 2); slBeep(G); slBeep(C, 0.286f); slBeep(C4, 2); slBeep(A); slBeep(C4, 2);
+			slBeep(B); slBeep(C4, 2); slBeep(B); slBeep(G, 0.333f); slBeep(G, 2); slBeep(E4, 2); slBeep(D4); slBeep(C4, 2);
+			slBeep(B); slBeep(C4, 2); slBeep(B); slBeep(G, 0.286f); slBeep(C4, 2); slBeep(A); slBeep(C4, 2);
+			slBeep(B); slBeep(C4, 2); slBeep(B); slBeep(G, 0.333f); slBeep(A, 2); slBeep(A, 2); slBeep(F); slBeep(A, 2);
+			slBeep(G); slBeep(A, 2); slBeep(G); slBeep(C, 0.286f);
+
+			slBeep(D4, 0.154f); slBeep(C4, 2); slBeep(D4, 2); slBeep(E4, 0.143f); slBeep(C4, 2); slBeep(C4, 2); slBeep(E4, 2);
+			slBeep(Dsharp4, 0.154f); slBeep(C4, 2); slBeep(Dsharp4, 2); slBeep(D4, 0.25f); slBeep(E4); slBeep(E4, 2); slBeep(F4, 2); slBeep(E4, 2); slBeep(G4, 2); slBeep(E4, 2); slBeep(E4, 2); slBeep(C4, 2);
+		}
+	}
 
 	static DWORD WINAPI musicReconstructScience(LPVOID lpParam = 0)
         {
@@ -1516,8 +1547,8 @@ public:
                 case SMDWin:
 					t0 = CreateThread(NULL, 0, musicSMDWin, 0, 0, t);
                     break;
-                case SMDBGM:
-					t0 = CreateThread(NULL, 0, musicSMBDieBass, 0, 0, t);
+                case Sonic1GHZ:
+					t0 = CreateThread(NULL, 0, musicS1GHZ, 0, 0, t);
                     break;
                 case ReconstructingMoreScience:
 					t0 = CreateThread(NULL, 0, musicReconstructScience, 0, 0, t);

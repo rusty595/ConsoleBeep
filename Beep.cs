@@ -105,7 +105,7 @@ namespace SoundLib
             }
         }
 
-        public enum TrackName { SMBDie, SMBWin, NSMBBGM, SMDDie, SMDWin, SMDBGM, ReconstructingMoreScience, YourPreciousMoon, MagicRoundabout, AllStar, Umaru, Futurama, Stop }
+        public enum TrackName { SMBDie, SMBWin, NSMBBGM, SMDDie, SMDWin, Sonic1GHZ, ReconstructingMoreScience, YourPreciousMoon, MagicRoundabout, AllStar, Umaru, Futurama, Stop }
 
         public static void musicSMBDie() { float initTempo = tempo; tempo = 600.0f; Beep("B3", 4); Beep("F4", 2); Beep("F4", 4); Beep("F4", 3); Beep("E4", 3); Beep("D4", 3); Beep("C4", 4); Beep("E3", 2); Beep("E3", 4); Beep("C3", 2); tempo = initTempo; }
         public static void musicSMBWin() { float initTempo = tempo; tempo = 600.0f; Beep("G2", 3); Beep("C3", 3); Beep("E3", 3); Beep("G3", 3); Beep("C4", 3); Beep("E4", 3); Beep("G4", 1); Beep("E4", 1); Beep("G#2", 3); Beep("C3", 3); Beep("D#3", 3); Beep("G#3", 3); Beep("C4", 3); Beep("D#4", 3); Beep("G#4", 1); Beep("D#4", 1); Beep("A#2", 3); Beep("D3", 3); Beep("F3", 3); Beep("A#3", 3); Beep("D4", 3); Beep("F4", 3); Beep("A#4", 1); Beep("A#4", 3); Beep("A#4", 3); Beep("A#4", 3); Beep("C5", 0.5f); tempo = initTempo; }
@@ -177,6 +177,37 @@ namespace SoundLib
         public static void musicSMBDieBass() { tempo = 600.0f; Beep("G2", 2); Beep(" ", 4); Beep("G2", 4); Beep("G2", 3); Beep("A2", 3); Beep("B2", 3); Beep("C3", 2); Beep("G2", 2); Beep("C2", 2); }
 
         public static void musicSMDWin() { float initTempo = tempo; tempo = 350.0f; Beep("G3", 2); Beep("G3", 2); Beep("C4"); Beep("B3"); Beep("G3", 2); Beep("G3", 2); Beep("C4"); Beep("B3"); Beep("G3", 2); Beep("G3", 2); Beep("C4"); Beep("B3", 0.5f); Beep("C5", 2); Beep("B4", 2); Beep("G4", 2); Beep("A4", 0.2f); tempo = initTempo; }
+        public static void musicS1GHZ()
+        {
+            float initTempo = tempo; tempo = 400.0f;
+            Beep("A4", 4); Beep("F4", 4); Beep("A4", 4); Beep("F4", 4);
+            Beep("B4", 4); Beep("G4", 4); Beep("B4", 4); Beep("G4", 4);
+            Beep("C5", 4); Beep("A4", 4); Beep("C5", 4); Beep("A4", 4);
+            Beep("D5", 4); Beep("B4", 4); Beep("D5", 4); Beep("B4", 4);
+
+            Beep("B"); Beep("R", 2); Beep("A", 0.666f); Beep("B");
+            Beep("R", 2); Beep("A", 0.666f); Beep("B"); Beep("A");
+            Beep("C4"); Beep("R", 2); Beep("B", 0.666f); Beep("A", 0.2f);
+
+            Beep("A"); Beep("R", 2); Beep("B", 0.666f); Beep("C4");
+            Beep("A"); Beep("R", 2); Beep("B", 0.666f); Beep("C4");
+            Beep("C4"); Beep("R", 2); Beep("B", 0.154f);
+            while (true)
+            {
+                Beep("R", 0.5f); Beep("C4", 2); Beep("A"); Beep("C4", 2);
+                Beep("B"); Beep("C4", 2); Beep("B"); Beep("G", 0.333f); Beep("G", 2); Beep("E4", 2); Beep("D4"); Beep("C4", 2);
+                Beep("B"); Beep("C4", 2); Beep("B"); Beep("G", 0.286f); Beep("C4", 2); Beep("A"); Beep("C4", 2);
+                Beep("B"); Beep("C4", 2); Beep("B"); Beep("G", 0.333f); Beep("A", 2); Beep("A", 2); Beep("F"); Beep("A", 2);
+                Beep("G"); Beep("A", 2); Beep("G"); Beep("C", 0.286f); Beep("C4", 2); Beep("A"); Beep("C4", 2);
+                Beep("B"); Beep("C4", 2); Beep("B"); Beep("G", 0.333f); Beep("G", 2); Beep("E4", 2); Beep("D4"); Beep("C4", 2);
+                Beep("B"); Beep("C4", 2); Beep("B"); Beep("G", 0.286f); Beep("C4", 2); Beep("A"); Beep("C4", 2);
+                Beep("B"); Beep("C4", 2); Beep("B"); Beep("G", 0.333f); Beep("A", 2); Beep("A", 2); Beep("F"); Beep("A", 2);
+                Beep("G"); Beep("A", 2); Beep("G"); Beep("C", 0.286f);
+
+                Beep("D4", 0.154f); Beep("C4", 2); Beep("D4", 2); Beep("E4", 0.143f); Beep("C4", 2); Beep("C4", 2); Beep("E4", 2);
+                Beep("D#4", 0.154f); Beep("C4", 2); Beep("D#4", 2); Beep("D4", 0.25f); Beep("E4"); Beep("E4", 2); Beep("F4", 2); Beep("E4", 2); Beep("G4", 2); Beep("E4", 2); Beep("E4", 2); Beep("C4", 2);
+            }
+        }
 
         public static void musicReconstructScience()
         {
@@ -1495,8 +1526,8 @@ namespace SoundLib
                 case TrackName.SMDWin:
                     t = new Thread(new ThreadStart(musicSMDWin));
                     break;
-                case TrackName.SMDBGM:
-                    t = new Thread(new ThreadStart(musicSMBDieBass));
+                case TrackName.Sonic1GHZ:
+                    t = new Thread(new ThreadStart(musicS1GHZ));
                     break;
                 case TrackName.ReconstructingMoreScience:
                     t = new Thread(new ThreadStart(musicReconstructScience));
