@@ -116,7 +116,7 @@ public:
 		Beep(n, l);
     }
 
-	enum TrackName { SMBDie, SMBWin, NSMBBGM, SMDDie, SMDWin, SMDBGM, ReconstructingMoreScience, YourPreciousMoon, MagicRoundabout, AllStar, Umaru, Stop };
+	enum TrackName { SMBDie, SMBWin, NSMBBGM, SMDDie, SMDWin, SMDBGM, ReconstructingMoreScience, YourPreciousMoon, MagicRoundabout, AllStar, Umaru, Futurama, Stop };
 
 	static DWORD WINAPI musicSMBDie(LPVOID lpParam = 0) { float initTempo = tempo; tempo = 600.0f; slBeep(B3, 4); slBeep(F4, 2); slBeep(F4, 4); slBeep(F4, 3); slBeep(E4, 3); slBeep(D4, 3); slBeep(C4, 4); slBeep(E3, 2); slBeep(E3, 4); slBeep(C3, 2); tempo = initTempo; return 0; }
 	
@@ -307,7 +307,28 @@ public:
 		tempo = initTempo;
 		return 0;
 	}
+	static DWORD WINAPI musicFut(LPVOID lpParam = 0)
+	{
+		float initTempo = tempo; tempo = 600.0f;
+		slBeep(E4, 0.666f); slBeep(E4, 2); slBeep(A4); slBeep(Gsharp4);
+		slBeep(D4, 0.666f); slBeep(D4, 2); slBeep(Fsharp4); slBeep(E4);
+		for (byte b0 = 0; b0 < 2; b0++)
+		{
+			slBeep(E4); slBeep(E4); slBeep(R, 2); slBeep(A4, 2); slBeep(A4);
+			slBeep(D4); slBeep(D4); slBeep(R, 2); if (b0 < 1) { slBeep(E4, 2); slBeep(E4); }
+			else { slBeep(G4, 2); slBeep(G4, 2); slBeep(Fsharp4, 2); }
+		}
+		slBeep(E4, 0.666f); slBeep(E4, 2); slBeep(A4); slBeep(Gsharp4);
+		slBeep(D4, 0.666f); slBeep(D4, 2); slBeep(Fsharp4); slBeep(E4);
+		slBeep(E4, 0.666f); slBeep(E4, 2); slBeep(A4); slBeep(Gsharp4);
+		slBeep(B4, 0.666f); slBeep(B4, 2); slBeep(G4, 2); slBeep(G4, 2); slBeep(Fsharp4, 2); slBeep(Fsharp4, 2);
 
+		slBeep(E1, 2); slBeep(D2, 2); slBeep(E2, 2); slBeep(A1); slBeep(D2, 2); slBeep(E2, 2); slBeep(B1, 2);
+
+		slBeep(R, 2); slBeep(Gsharp4, 4); slBeep(Gsharp4, 4); slBeep(Gsharp4, 2); slBeep(Dsharp4, 2); slBeep(Dsharp4, 2); slBeep(B3, 2); slBeep(B3, 2); slBeep(Gsharp3, 2); slBeep(BELL); slBeep(R);
+		tempo = initTempo;
+		return 0;
+	}
 
 	static DWORD WINAPI musicAllStar(LPVOID lpParam = 0)
         {
@@ -1512,6 +1533,9 @@ public:
                     break;
 				case Umaru:
 					t0 = CreateThread(NULL, 0, musicUMR, 0, 0, t);
+					break;
+				case Futurama:
+					t0 = CreateThread(NULL, 0, musicFut, 0, 0, t);
 					break;
                 default:
 					TerminateThread(t0, 0);
