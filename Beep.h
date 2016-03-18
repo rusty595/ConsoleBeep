@@ -34,7 +34,7 @@ public:
         int l = (int)(tempo / inverseFractionOfQuarterNote);
         switch (f)
             {
-		case BELL: std::cout << '\a'; return;
+				case BELL: std::cout << '\a'; return;
                 case R:
                 case REST: Sleep(l); return;
                 case C1: n = 65; break; // n=2^((x+12)/12)*440 where x = number of semitones from A4
@@ -1606,7 +1606,64 @@ public:
 		std::cout << "for ";	slBeep(F3, 2);
 		std::cout << "them";	slBeep(G3, 1.5f);
 		slBeep(R, 0.25f);
+
+		std::cout << "\n";
+		printCIA();
+		std::cout << "And ";	slBeep(C3, 2);
+		std::cout << "why ";	slBeep(Gsharp3);
+		std::cout << "would ";	slBeep(F3, 2);
+		std::cout << "I ";		slBeep(F3, 3);
+		std::cout << "want ";	slBeep(D3);
+		std::cout << "them?";	slBeep(Gsharp3);
+		slBeep(R, 0.25f);
+
+		std::cout << "\n";
+		printDriver();
+		std::cout << "They ";	slBeep(Fsharp3, 2);
+		std::cout << "were ";	slBeep(F3, 2);
+		std::cout << "try";		slBeep(G3, 3);
+		std::cout << "ing ";	slBeep(G3, 2);
+		std::cout << "to ";		slBeep(F3, 3);
+		std::cout << "grab ";	slBeep(Gsharp3, 2);
+		std::cout << "your ";	slBeep(F3, 2);
+		std::cout << "prize.";	slBeep(G3, 1.5f);
+		std::cout << " ";		slBeep();
+		std::cout << "\n";
+		printDriver();
+		std::cout << "They ";	slBeep(Gsharp3, 2);
+		std::cout << "work ";	slBeep(F3);
+		std::cout << "for ";	slBeep(G3, 3);
+		std::cout << "the ";	slBeep(G3, 3);
+		std::cout << "mer";		slBeep(Gsharp3);
+		std::cout << "ce";		slBeep(F3, 3);
+		std::cout << "na";		slBeep(F3);
+		std::cout << "ry.";		slBeep(Fsharp3);
+		std::cout << " ";		slBeep(R, 2);
+		std::cout << "The ";	slBeep(F3, 2);
+		std::cout << "mas";		slBeep(Gsharp3, 2);
+		std::cout << "ked ";	slBeep(F3, 2);
+		std::cout << "man.";	slBeep(G3, 1.5f);
+		slBeep(R, 0.25f);
+
+		std::cout << "\n";
+		printCIA();
+		std::cout << "Bane?";	slBeep(A3, 0.5f);
+		slBeep(R, 0.25f);
+
+		std::cout << "\n";
+		printCIA();
+		std::cout << "Get ";	slBeep(Gsharp3, 2);
+		std::cout << "'em ";	slBeep(F3, 3);
+		std::cout << "on ";		slBeep(E3, 2);
+		std::cout << "board, ";	slBeep(D3);
+		std::cout << "I'll ";	slBeep(A3, 2);
+		std::cout << "call ";	slBeep(G3, 2);
+		std::cout << "it ";		slBeep(Fsharp3, 2);
+		std::cout << "in.";		slBeep(G3, 2);
+		slBeep(R, 0.25f);
 		
+		slBeep(A2, 0.001f);
+
 		//slBeep(R, 0.001f);
 
 		tempo = initTempo;
