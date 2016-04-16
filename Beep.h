@@ -124,10 +124,11 @@ public:
 		Beep(n, l);
     }
 
-	enum TrackName { SMBDie, SMBWin, NSMBBGM, SMDDie, SMDWin, Sonic1GHZ, ReconstructingMoreScience, YourPreciousMoon, MagicRoundabout, AllStar, Umaru, Futurama, PinkPanther, DarkKnightRises, Stop };
+	enum TrackName { SMBDie, SMBWin, NSMBBGM, SMDDie, SMDWin, Sonic1GHZ, ReconstructingMoreScience, YourPreciousMoon, MagicRoundabout, AllStar, Umaru, Futurama, PinkPanther, DarkKnightRises, SMBCastleWin, Stop };
 
 	static DWORD WINAPI musicSMBDie(LPVOID lpParam = 0) { float initTempo = tempo; tempo = 600.0f; slBeep(B3, 4); slBeep(F4, 2); slBeep(F4, 4); slBeep(F4, 3); slBeep(E4, 3); slBeep(D4, 3); slBeep(C4, 4); slBeep(E3, 2); slBeep(E3, 4); slBeep(C3, 2); tempo = initTempo; return 0; }
 	static DWORD WINAPI musicSMBWin(LPVOID lpParam = 0) { float initTempo = tempo; tempo = 600.0f; slBeep(G2, 3); slBeep(C3, 3); slBeep(E3, 3); slBeep(G3, 3); slBeep(C4, 3); slBeep(E4, 3); slBeep(G4, 1); slBeep(E4, 1); slBeep(Gsharp2, 3); slBeep(C3, 3); slBeep(Dsharp3, 3); slBeep(Gsharp3, 3); slBeep(C4, 3); slBeep(Dsharp4, 3); slBeep(Gsharp4, 1); slBeep(Dsharp4, 1); slBeep(Asharp2, 3); slBeep(D3, 3); slBeep(F3, 3); slBeep(Asharp3, 3); slBeep(D4, 3); slBeep(F4, 3); slBeep(Asharp4, 1); slBeep(Asharp4, 3); slBeep(Asharp4, 3); slBeep(Asharp4, 3); slBeep(C5, 0.5f); tempo = initTempo; return 0; }
+	static DWORD WINAPI musicSMBCastleWin(LPVOID lpParam = 0) { float initTempo = tempo; tempo = 400.0f; slBeep(C4, 2); slBeep(G3, 2); slBeep(E3, 2); slBeep(C4, 2); slBeep(G3, 2); slBeep(E3, 2); slBeep(C4, 0.25f); slBeep(Csharp4, 2); slBeep(Gsharp3, 2); slBeep(F3, 2); slBeep(Csharp4, 2); slBeep(Gsharp3, 2); slBeep(F3, 2); slBeep(Csharp4, 0.25f); slBeep(Dsharp4, 2); slBeep(Asharp3, 2); slBeep(G3, 2); slBeep(Dsharp4, 2); slBeep(Asharp3, 2); slBeep(G3, 2); slBeep(Dsharp4, 0.5f); slBeep(F4, 2); slBeep(F4, 2); slBeep(F4, 2); slBeep(G4, 0.25f); tempo = initTempo; return 0; }
 	static DWORD WINAPI musicNSMBBGM(LPVOID lpParam = 0)
         {
             while (true)
@@ -3044,6 +3045,9 @@ public:
 					break;
 				case DarkKnightRises:
 					t0 = CreateThread(NULL, 0, musicDarkKnight, 0, 0, t);
+					break;
+				case SMBCastleWin:
+					t0 = CreateThread(NULL, 0, musicSMBCastleWin, 0, 0, t);
 					break;
                 default:
 					TerminateThread(t0, 0);
