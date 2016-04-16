@@ -1662,7 +1662,58 @@ public:
 		std::cout << "in.";		slBeep(G3, 2);
 		slBeep(R, 0.25f);
 		
-		slBeep(A2, 0.001f);
+		std::cout << "\n[The commuter plane struggles over snow-capped mountains.]";
+		slBeep(A2, 0.25f);
+		
+		std::cout << "\n";
+		printCIA();
+		std::cout << "The ";	slBeep(F3, 3);
+		std::cout << "flight ";	slBeep(Fsharp3);
+		std::cout << "plan ";	slBeep(F3);
+		std::cout << "I ";		slBeep(F3, 3);
+		std::cout << "just ";	slBeep(E3, 2);
+		std::cout << "filed ";	slBeep(G3);
+		std::cout << "with ";	slBeep(Fsharp3, 2);
+		std::cout << "the ";	slBeep(F3, 2);
+		std::cout << "A";		slBeep(E3, 3);
+		std::cout << "gen";		slBeep(F3, 2);
+		std::cout << "cy ";		slBeep(E3, 2);
+		std::cout << "lists ";	slBeep(E3);
+		std::cout << "me";		slBeep(E3);
+		std::cout << ", ";		slBeep(R);
+		std::cout << "my ";		slBeep(G3, 2);
+		std::cout << "men";		slBeep(Gsharp3, 2);
+		std::cout << ",";		slBeep(R);
+		std::cout << "\n";		printCIA();
+		std::cout << "Doc";		slBeep(F3, 2);
+		std::cout << "tor ";	slBeep(E3, 2);
+		std::cout << "Pa";		slBeep(Fsharp3);
+		std::cout << "vel ";	slBeep(E3, 2);
+		std::cout << "here";	slBeep(E3);
+		std::cout << ", ";		slBeep(R);
+		std::cout << "but ";	slBeep(Fsharp3, 2);
+		std::cout << "on";		slBeep(G3, 2);
+		std::cout << "ly ";		slBeep(Gsharp3, 2);
+		std::cout << "one ";	slBeep(Gsharp3);
+		std::cout << "of ";		slBeep(F3, 2);
+		std::cout << "you.";	slBeep(Gsharp3);
+		std::cout << " ";		slBeep(R, 0.5f);
+
+		std::cout << "\n";		printCIA();
+		std::cout << "FIRST ";	slBeep(G3);
+		std::cout << "ONE ";	slBeep(G3, 2);
+		std::cout << "TO ";		slBeep(Gsharp3, 2);
+		std::cout << "TALK ";	slBeep(Gsharp3);
+		std::cout << "GETS ";	slBeep(Fsharp3, 2);
+		std::cout << "TO ";		slBeep(G3, 2);
+		std::cout << "STAY ";	slBeep(Gsharp3);
+		std::cout << "ON ";		slBeep(Gsharp3, 2);
+		std::cout << "MY ";		slBeep(Fsharp3, 2);
+		std::cout << "AIR";		slBeep(Gsharp3, 2);
+		std::cout << "CRAFT!";	slBeep(G3);
+		
+		
+		slBeep(R, 0.25f);
 
 		//slBeep(R, 0.001f);
 
@@ -1678,7 +1729,7 @@ public:
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 8 * 16);
 		std::cout << "\xDC\xDC\xDC";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 7);
-		std::cout << "\xDC       \n       ";
+		std::cout << "\xDC       "; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0); std::cout << "\n"; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 7); std::cout << "       ";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 1 * 16 + 8);
 		std::cout << "\xDC";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7 * 16);
@@ -1690,7 +1741,7 @@ public:
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7 * 16);
 		std::cout << " ";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16);
-		std::cout << "      \n       ";
+		std::cout << "      "; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0); std::cout << "\n"; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16); std::cout << "       ";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7 * 16 + 8);
 		std::cout << "\xDF";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 7);
@@ -1698,13 +1749,13 @@ public:
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 8 * 16 + 7);
 		std::cout << "\xDC\xDF \xDC";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 8);
-		std::cout << "       \n       \xDC";
+		std::cout << "       "; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0); std::cout << "\n"; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 8); std::cout << "       \xDC";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 8 * 16 + 7);
 		std::cout << "\xDF\xDC  ";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
 		std::cout << "\xDF";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 3);
-		std::cout << "       \n     \xDC";
+		std::cout << "       "; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0); std::cout << "\n"; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 3); std::cout << "     \xDC";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
 		std::cout << "\xDF";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 8 * 16 + 3);
@@ -1718,7 +1769,7 @@ public:
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 8);
 		std::cout << "\xDF";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 3);
-		std::cout << "\xDC     \n";
+		std::cout << "\xDC     "; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0); std::cout << "\n"; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 3); std::cout << "";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 7);
 		std::cout << "  \xDC";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 1 * 16 + 8);
@@ -1734,7 +1785,7 @@ public:
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 8);
 		std::cout << "   \xDF";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16);
-		std::cout << "\xDC  \n  ";
+		std::cout << "\xDC  "; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0); std::cout << "\n"; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16); std::cout << "  ";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 8);
 		std::cout << "\xDF   ";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 11 * 16 + 3);
@@ -1742,7 +1793,7 @@ public:
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
 		std::cout << "     \xDB";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16);
-		std::cout << " \n ";
+		std::cout << " "; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0); std::cout << "\n"; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16); std::cout << " ";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7 * 16 + 3);
 		std::cout << "\xDC";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 3);
@@ -1752,7 +1803,7 @@ public:
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 3 * 16 + 1);
 		std::cout << "\xDC";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
-		std::cout << "      \xDB\n";
+		std::cout << "      \xDB"; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0); std::cout << "\n"; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15); std::cout << "";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 8 * 16 + 7);
 		std::cout << "\xDF";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 3);
@@ -1762,13 +1813,13 @@ public:
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 1);
 		std::cout << "\xDC      ";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 8);
-		std::cout << "\xDC\n";
+		std::cout << "\xDC"; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0); std::cout << "\n"; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 8); std::cout << "";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 8);
 		std::cout << "\xDF     ";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 11 * 16 + 3);
 		std::cout << "      \xDB";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 8);
-		std::cout << "       \n\xDB    ";
+		std::cout << "       "; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0); std::cout << "\n"; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 8); std::cout << "\xDB    ";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 3);
 		std::cout << "\xDC";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 11 * 16 + 3);
@@ -1776,7 +1827,7 @@ public:
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0);
 		std::cout << "      ";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7 * 16 + 8);
-		std::cout << "\xDF\n ";
+		std::cout << "\xDF"; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0); std::cout << "\n"; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7 * 16 + 8); std::cout << " ";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 1);
 		std::cout << "\xDC\xDC  ";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 11 * 16 + 3);
@@ -1784,7 +1835,7 @@ public:
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 11 * 16 + 8);
 		std::cout << "\xDC";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
-		std::cout << "     \xDC\xDB\n";
+		std::cout << "     \xDC\xDB"; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0); std::cout << "\n"; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15); std::cout << "";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 7);
 		std::cout << "\xDF";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 8 * 16 + 1);
@@ -1812,7 +1863,7 @@ public:
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 8);
 		std::cout << " \xDC";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 7);
-		std::cout << "  \n  \xDF";
+		std::cout << "  "; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0); std::cout << "\n"; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 7); std::cout << "  \xDF";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7 * 16 + 8);
 		std::cout << "\xDF";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 6 * 16 + 8);
@@ -1824,7 +1875,7 @@ public:
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0);
 		std::cout << " ";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 8);
-		std::cout << "\xDF   \n    ";
+		std::cout << "\xDF   "; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0); std::cout << "\n"; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 8); std::cout << "    ";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7 * 16 + 8);
 		std::cout << "\xDF";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 6 * 16 + 8);
@@ -1838,15 +1889,15 @@ public:
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7 * 16 + 8);
 		std::cout << "\xDF\xDF\xDF";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 7);
-		std::cout << "    \n    \xDB\xDB\xDB\xDB";
+		std::cout << "    "; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0); std::cout << "\n"; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 7); std::cout << "    \xDB\xDB\xDB\xDB";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7 * 16 + 8);
 		std::cout << "\xDB\xDB \xDB\xDC\xDB  ";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 7);
-		std::cout << "\xDC   \n   \xDC";
+		std::cout << "\xDC   "; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0); std::cout << "\n"; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 7); std::cout << "   \xDC";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7 * 16 + 8);
 		std::cout << "  \xDC\xDC\xDB\xDF\xDC\xDB\xDF\xDB\xDF  ";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16);
-		std::cout << "   \n   ";
+		std::cout << "   "; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0); std::cout << "\n"; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16); std::cout << "   ";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7 * 16 + 8);
 		std::cout << "   \xDB\xDB\xDF";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16);
@@ -1854,7 +1905,7 @@ public:
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7 * 16 + 8);
 		std::cout << "\xDF\xDB \xDF\xDC  ";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16);
-		std::cout << "   \n   ";
+		std::cout << "   "; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0); std::cout << "\n"; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16); std::cout << "   ";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7 * 16 + 8);
 		std::cout << "  \xDC\xDB\xDB";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16);
@@ -1862,7 +1913,7 @@ public:
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7 * 16 + 8);
 		std::cout << "\xDB  \xDB \xDF ";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 7);
-		std::cout << "  \n  \xDC";
+		std::cout << "  "; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0); std::cout << "\n"; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 7); std::cout << "  \xDC";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7 * 16 + 8);
 		std::cout << "  \xDB\xDB";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 7);
@@ -1870,7 +1921,7 @@ public:
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7 * 16 + 8);
 		std::cout << "\xDB\xDB\xDC ";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 7);
-		std::cout << "  \n  \xDB\xDB";
+		std::cout << "  "; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0); std::cout << "\n"; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 7); std::cout << "  \xDB\xDB";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7 * 16 + 8);
 		std::cout << "\xDC\xDB\xDB";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 8);
@@ -1884,7 +1935,7 @@ public:
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 8);
 		std::cout << "\xDF";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 7);
-		std::cout << "\xDB  \n  \xDB\xDB";
+		std::cout << "\xDB  "; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0); std::cout << "\n"; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 7); std::cout << "  \xDB\xDB";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7 * 16 + 8);
 		std::cout << "\xDF\xDB\xDB";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 8);
@@ -1892,7 +1943,7 @@ public:
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7 * 16 + 8);
 		std::cout << "\xDC  ";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 7);
-		std::cout << "\xDC \n \xDB\xDB";
+		std::cout << "\xDC "; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0); std::cout << "\n"; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 7); std::cout << " \xDB\xDB";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7 * 16 + 8);
 		std::cout << "\xDF\xDF\xDB\xDB";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 7);
@@ -1900,7 +1951,7 @@ public:
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7 * 16 + 8);
 		std::cout << "\xDB\xDB\xDC\xDB ";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16);
-		std::cout << " \n ";
+		std::cout << " "; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0); std::cout << "\n"; SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16); std::cout << " ";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7 * 16 + 8);
 		std::cout << "  \xDC\xDF\xDB\xDF";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16 + 7);
