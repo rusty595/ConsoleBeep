@@ -1587,7 +1587,7 @@ public:
 		slBeep(R, 0.25f);
 
 		std::cout << "\n";
-		printPaval();
+		printPavel();
 		std::cout << "They ";	slBeep(D2, 2);
 		std::cout << "are ";	slBeep(E2, 2);
 		std::cout << "not ";	slBeep(F2, 2);
@@ -2408,7 +2408,7 @@ public:
 
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
 	}
-	static void printPaval()
+	static void printPavel()
 	{
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15 * 16);
 		std::cout << "            \xDC";
