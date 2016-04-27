@@ -116,7 +116,7 @@ public:
 		Beep(n, l);
     }
 
-	enum TrackName { SMBDie, SMBWin, NSMBBGM, SMDDie, SMDWin, Sonic1GHZ, ReconstructingMoreScience, YourPreciousMoon, MagicRoundabout, AllStar, Umaru, Futurama, PinkPanther, DarkKnightRises, SMBCastleWin, SMBCastleDie, NARussia, NACommonwealth, NAUSA, Stop };
+	enum TrackName { SMBDie, SMBWin, NSMBBGM, SMDDie, SMDWin, Sonic1GHZ, ReconstructingMoreScience, YourPreciousMoon, MagicRoundabout, AllStar, Umaru, Futurama, PinkPanther, DarkKnightRises, SMBCastleWin, SMBCastleDie, NARussia, NACommonwealth, NAUSA, NALichtenstein, Dangermouse, Flinstones, NAmlp, GiddyUp, Stop };
 
 	static DWORD WINAPI musicSMBDie(LPVOID lpParam = 0) { float initTempo = tempo; tempo = 600.0f; slBeep(B3, 4); slBeep(F4, 2); slBeep(F4, 4); slBeep(F4, 3); slBeep(E4, 3); slBeep(D4, 3); slBeep(C4, 4); slBeep(E3, 2); slBeep(E3, 4); slBeep(C3, 2); tempo = initTempo; return 0; }
 	static DWORD WINAPI musicSMBWin(LPVOID lpParam = 0) { float initTempo = tempo; tempo = 600.0f; slBeep(G2, 3); slBeep(C3, 3); slBeep(E3, 3); slBeep(G3, 3); slBeep(C4, 3); slBeep(E4, 3); slBeep(G4, 1); slBeep(E4, 1); slBeep(Gsharp2, 3); slBeep(C3, 3); slBeep(Dsharp3, 3); slBeep(Gsharp3, 3); slBeep(C4, 3); slBeep(Dsharp4, 3); slBeep(Gsharp4, 1); slBeep(Dsharp4, 1); slBeep(Asharp2, 3); slBeep(D3, 3); slBeep(F3, 3); slBeep(Asharp3, 3); slBeep(D4, 3); slBeep(F4, 3); slBeep(Asharp4, 1); slBeep(Asharp4, 3); slBeep(Asharp4, 3); slBeep(Asharp4, 3); slBeep(C5, 0.5f); tempo = initTempo; return 0; }
@@ -388,6 +388,67 @@ public:
 			slBeep(G, 2.666f); slBeep(E, 2.666f); slBeep(D, 4); slBeep(E, 2); slBeep(E, 0.222f); slBeep(R, 0.5f);
 			slBeep(G, 2.666f); slBeep(E, 2.666f); slBeep(D, 4); slBeep(E, 2); slBeep(E, 0.222f); slBeep(R, 0.571f); slBeep(Dsharp, 4);
 		}
+	}
+	static DWORD WINAPI musicDM(LPVOID lpParam = 0)
+	{
+		float initTempo = tempo; tempo = 380.0f;
+
+		slBeep(E, 1.33f); slBeep(E, 4); slBeep(E, 2.66f); slBeep(E, 1.6f); slBeep(E, 1.33f); slBeep(E, 4); slBeep(R, 2.66f); slBeep(E, 1.6f);
+		slBeep(Gsharp, 1.33f); slBeep(Gsharp, 4); slBeep(Gsharp, 2.66f); slBeep(Gsharp, 1.6f); slBeep(Gsharp, 1.33f); slBeep(Gsharp, 4); slBeep(R, 2.66f); slBeep(Gsharp, 1.6f);
+		slBeep(B, 1.33f); slBeep(B, 4); slBeep(B, 2.66f); slBeep(B, 1.6f); slBeep(B, 1.33f); slBeep(B, 4); slBeep(R, 2.66f); slBeep(B, 1.6f);
+		slBeep(D4, 0.25f);
+
+		slBeep(R, 2); slBeep(E4, 2); slBeep(R, 2); slBeep(D4, 2); slBeep(C4); slBeep(A);
+		slBeep(C4); slBeep(D4); slBeep(C4); slBeep();
+		slBeep(R, 2); slBeep(E4, 2); slBeep(R, 2); slBeep(D4, 2); slBeep(C4); slBeep(A);
+		slBeep(R, 2); slBeep(E4, 2); slBeep(R, 2); slBeep(D4, 2); slBeep(C4); slBeep(A);
+		slBeep(F, 0.5f); slBeep(C4, 0.5f);
+		slBeep(E4, 0.33f); slBeep();
+		slBeep(R, 2); slBeep(E4, 2); slBeep(R, 2); slBeep(D4, 2); slBeep(C4); slBeep(A);
+		slBeep(R, 2); slBeep(E4, 2); slBeep(R, 2); slBeep(D4, 2); slBeep(C4); slBeep(A);
+		slBeep(F, 0.5f); slBeep(C4, 0.5f);
+		slBeep(A4, 0.166f); slBeep(R, 0.5f);
+
+		slBeep(); slBeep(R, 0.5f); slBeep(R, 2); slBeep(R, 4); slBeep(F4, 4);
+		slBeep(F4, 1.66f); slBeep(Csharp4, 4); slBeep(Csharp4, 1.66f); slBeep(Asharp, 4); slBeep(Asharp); slBeep();
+		slBeep(); slBeep(R, 0.5f); slBeep(R, 2); slBeep(R, 4); slBeep(Fsharp4, 4);
+		slBeep(Fsharp4, 1.66f); slBeep(D4, 4); slBeep(D4, 1.66f); slBeep(B, 4); slBeep(B); slBeep();
+
+		slBeep(E4, 1.33f); slBeep(E4, 4); slBeep(E4, 2.66f); slBeep(E4, 1.6f); slBeep(E4, 1.33f); slBeep(E4, 4); slBeep(R, 2.66f); slBeep(E4, 1.6f);
+		slBeep(F4, 1.33f); slBeep(F4, 4); slBeep(F4, 2.66f); slBeep(F4, 1.6f); slBeep(F4, 1.33f); slBeep(F4, 4); slBeep(R, 2.66f); slBeep(D4, 1.6f);
+		slBeep(E4); slBeep(R, 2.66f); slBeep(B, 1.6f); slBeep(E4, 0.166f);
+
+		slBeep(R, 2); slBeep(E4, 2); slBeep(R, 2); slBeep(D4, 2); slBeep(C4); slBeep(A);
+		slBeep(R, 2); slBeep(E4, 2); slBeep(R, 2); slBeep(D4, 2); slBeep(C4); slBeep(A);
+		slBeep(F, 0.5f); slBeep(C4, 0.5f);
+		slBeep(E4, 0.33f); slBeep();
+		slBeep(R, 2); slBeep(E4, 2); slBeep(R, 2); slBeep(D4, 2); slBeep(C4); slBeep(A);
+		slBeep(R, 2); slBeep(E4, 2); slBeep(R, 2); slBeep(D4, 2); slBeep(C4); slBeep(A);
+		slBeep(F, 0.5f); slBeep(C4, 0.5f);
+		slBeep(A4, 0.166f); slBeep(R, 0.5f);
+
+		slBeep(); slBeep(R, 0.5f); slBeep(R, 2); slBeep(R, 4); slBeep(F4, 4);
+		slBeep(F4, 1.66f); slBeep(Csharp4, 4); slBeep(Csharp4, 1.66f); slBeep(Asharp, 4); slBeep(Asharp); slBeep();
+		slBeep(R, 2); slBeep(F4, 2); slBeep(R, 2); slBeep(Dsharp4, 2); slBeep(Csharp4); slBeep(Asharp);
+		slBeep(R, 2); slBeep(F4, 2); slBeep(R, 2); slBeep(Dsharp4, 2); slBeep(Csharp4); slBeep(Asharp);
+		slBeep(Fsharp, 0.5f); slBeep(Csharp4, 0.5f);
+		slBeep(F4, 0.33f); slBeep();
+		slBeep(R, 2); slBeep(F4, 2); slBeep(R, 2); slBeep(Dsharp4, 2); slBeep(Csharp4); slBeep(Asharp);
+		slBeep(R, 2); slBeep(F4, 2); slBeep(R, 2); slBeep(Dsharp4, 2); slBeep(Csharp4); slBeep(Asharp);
+		slBeep(Fsharp, 0.5f); slBeep(Csharp4, 0.5f);
+		slBeep(Asharp4, 0.166f); slBeep(R, 0.5f);
+
+		slBeep(); slBeep(R, 0.5f); slBeep(R, 2); slBeep(R, 4); slBeep(Fsharp4, 4);
+		slBeep(Fsharp4, 1.66f); slBeep(D4, 4); slBeep(D4, 1.66f); slBeep(B, 4); slBeep(B); slBeep();
+		slBeep(); slBeep(R, 0.5f); slBeep(R, 2); slBeep(R, 4); slBeep(G4, 4);
+		slBeep(G4, 1.66f); slBeep(Dsharp4, 4); slBeep(Dsharp4, 1.66f); slBeep(C4, 4); slBeep(C4); slBeep();
+
+		slBeep(F4, 1.33f); slBeep(F4, 4); slBeep(F4, 2.66f); slBeep(F4, 1.6f); slBeep(F4, 1.33f); slBeep(F4, 4); slBeep(R, 2.66f); slBeep(F4, 1.6f);
+		slBeep(Fsharp4, 1.33f); slBeep(Fsharp4, 4); slBeep(Fsharp4, 2.66f); slBeep(Fsharp4, 1.6f); slBeep(Fsharp4, 1.33f); slBeep(Fsharp4, 4); slBeep(R, 2.66f); slBeep(Dsharp4, 1.6f);
+		slBeep(F4); slBeep(R, 2.66f); slBeep(C4, 1.6f); slBeep(F4, 0.166f);
+
+		tempo = initTempo;
+		return 0;
 	}
 
 	// passing this an int* to change the anti-tempo it is played at
@@ -2815,8 +2876,11 @@ public:
 		case NAUSA:
 			t0 = CreateThread(NULL, 0, musicStarSpangledBanner, b, 0, t);
 			break;
-		case NACommonwealth:
+		case NACommonwealth: case NALichtenstein:
 			t0 = CreateThread(NULL, 0, musicGSTQ, b, 0, t);
+			break;
+		case Dangermouse:
+			t0 = CreateThread(NULL, 0, musicDM, 0, 0, t);
 			break;
 		default:
 			TerminateThread(t0, 0);
