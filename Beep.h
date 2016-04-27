@@ -124,7 +124,7 @@ public:
 		Beep(n, l);
     }
 
-	enum TrackName { SMBDie, SMBWin, NSMBBGM, SMDDie, SMDWin, Sonic1GHZ, ReconstructingMoreScience, YourPreciousMoon, MagicRoundabout, AllStar, Umaru, Futurama, PinkPanther, DarkKnightRises, SMBCastleWin, SMBCastleDie, Stop };
+	enum TrackName { SMBDie, SMBWin, NSMBBGM, SMDDie, SMDWin, Sonic1GHZ, ReconstructingMoreScience, YourPreciousMoon, MagicRoundabout, AllStar, Umaru, Futurama, PinkPanther, DarkKnightRises, SMBCastleWin, SMBCastleDie, NARussia, NACommonwealth, Stop };
 
 	static DWORD WINAPI musicSMBDie(LPVOID lpParam = 0) { float initTempo = tempo; tempo = 600.0f; slBeep(B3, 4); slBeep(F4, 2); slBeep(F4, 4); slBeep(F4, 3); slBeep(E4, 3); slBeep(D4, 3); slBeep(C4, 4); slBeep(E3, 2); slBeep(E3, 4); slBeep(C3, 2); tempo = initTempo; return 0; }
 	static DWORD WINAPI musicSMBWin(LPVOID lpParam = 0) { float initTempo = tempo; tempo = 600.0f; slBeep(G2, 3); slBeep(C3, 3); slBeep(E3, 3); slBeep(G3, 3); slBeep(C4, 3); slBeep(E4, 3); slBeep(G4, 1); slBeep(E4, 1); slBeep(Gsharp2, 3); slBeep(C3, 3); slBeep(Dsharp3, 3); slBeep(Gsharp3, 3); slBeep(C4, 3); slBeep(Dsharp4, 3); slBeep(Gsharp4, 1); slBeep(Dsharp4, 1); slBeep(Asharp2, 3); slBeep(D3, 3); slBeep(F3, 3); slBeep(Asharp3, 3); slBeep(D4, 3); slBeep(F4, 3); slBeep(Asharp4, 1); slBeep(Asharp4, 3); slBeep(Asharp4, 3); slBeep(Asharp4, 3); slBeep(C5, 0.5f); tempo = initTempo; return 0; }
@@ -396,6 +396,56 @@ public:
 			slBeep(G, 2.666f); slBeep(E, 2.666f); slBeep(D, 4); slBeep(E, 2); slBeep(E, 0.222f); slBeep(R, 0.5f);
 			slBeep(G, 2.666f); slBeep(E, 2.666f); slBeep(D, 4); slBeep(E, 2); slBeep(E, 0.222f); slBeep(R, 0.571f); slBeep(Dsharp, 4);
 		}
+	}
+
+	// passing this a variable will change the anti-tempo it is played at
+	static DWORD WINAPI musicStateAnthemOfTheRussianFederation(LPVOID lpParam = 0)
+	{
+		if (lpParam != 0) tempo = *(int*)lpParam;
+		slBeep(Dsharp4, 0.5f); slBeep(R, 2); slBeep(Asharp3, 2);
+		slBeep(Dsharp4, 1); slBeep(Asharp3, 1.33f); slBeep(C4, 4); slBeep(D4, 1); slBeep(G3, 2); slBeep(G3, 2);
+		slBeep(C4, 1); slBeep(Asharp3, 1.33f); slBeep(Gsharp3, 4); slBeep(Asharp3, 1); slBeep(Dsharp3, 2); slBeep(Dsharp3, 2);
+		slBeep(F3, 1); slBeep(F3, 1.33f); slBeep(G3, 4); slBeep(Gsharp3, 1); slBeep(Gsharp3, 2); slBeep(Asharp3, 2);
+		slBeep(C4, 1); slBeep(D4, 2); slBeep(Dsharp4, 2); slBeep(F4, 0.66f); slBeep(Asharp3, 2);
+		slBeep(G4, 1); slBeep(F4, 1.33f); slBeep(Dsharp4, 4); slBeep(F4, 1); slBeep(D4, 2); slBeep(Asharp3, 2);
+		slBeep(Dsharp4, 1); slBeep(D4, 1.33f); slBeep(C4, 4); slBeep(D4, 1); slBeep(G3, 2); slBeep(G3, 2);
+		slBeep(C4, 1); slBeep(Asharp3, 1.33f); slBeep(Gsharp3, 4); slBeep(Asharp3, 1); slBeep(Dsharp3, 1.33f); slBeep(Dsharp3, 4);
+		slBeep(Dsharp4, 1); slBeep(D4, 1.33f); slBeep(C4, 4); slBeep(Asharp3, 2); slBeep(D4, 2); slBeep(Dsharp4, 2); slBeep(F4, 2);
+		slBeep(G4, 0.5f); slBeep(Asharp4, 2); slBeep(Dsharp4, 2); slBeep(D4, 2); slBeep(Dsharp4, 2);
+		slBeep(F4, 2); slBeep(Asharp4, 4); slBeep(Asharp4, 8); slBeep(Asharp4, 8); slBeep(Asharp4, 2); slBeep(Asharp3, 2); slBeep(Asharp3, 2); slBeep(D4, 2); slBeep(Dsharp4, 2); slBeep(F4, 2);
+		slBeep(Dsharp4, 0.5f); slBeep(G4, 2); slBeep(C4, 2); slBeep(Asharp3, 2); slBeep(C4, 2);
+		slBeep(D4, 2); slBeep(G4, 4); slBeep(G4, 8); slBeep(G4, 8); slBeep(G4, 2); slBeep(G3, 2); slBeep(G3, 2); slBeep(Asharp3, 2); slBeep(C4, 2); slBeep(D4, 2);
+		slBeep(Dsharp4, 1); slBeep(C4, 1.33f); slBeep(D4, 4); slBeep(Dsharp4, 1); slBeep(C4, 1.33f); slBeep(D4, 4);
+		slBeep(Dsharp4, 1); slBeep(C4, 2); slBeep(Dsharp4, 2); slBeep(Gsharp4, 2); slBeep(Gsharp4, 4); slBeep(Gsharp4, 8); slBeep(Gsharp4, 8); slBeep(Gsharp4, 2); slBeep(Gsharp4, 2);
+		slBeep(Gsharp4, 0.5f); slBeep(G4, 2); slBeep(F4, 2); slBeep(Dsharp4, 2); slBeep(F4, 2);
+		slBeep(G4, 0.66f); slBeep(Dsharp4, 2); slBeep(Dsharp4, 2); slBeep(Asharp3, 4); slBeep(Asharp3, 4); slBeep(Asharp3, 2); slBeep(Asharp3, 2);
+		slBeep(F4, 1); slBeep(C4, 1); slBeep(Dsharp4, 2); slBeep(D4, 2); slBeep(C4, 2); slBeep(D4, 2);
+		slBeep(Dsharp4, 0.66f); slBeep(C4, 2); slBeep(C4, 2);  slBeep(G3, 2); slBeep(Asharp2, 2); slBeep(G3, 2);
+		slBeep(Dsharp4, 1); slBeep(D4, 1.33f); slBeep(C4, 4); slBeep(Asharp3, 1); slBeep(Dsharp3, 2); slBeep(Dsharp3, 2);
+		slBeep(Dsharp4, 1); slBeep(D4, 2); slBeep(Dsharp3, 4); slBeep(C4, 4); slBeep(Asharp3, 1); slBeep(Gsharp3, 2); slBeep(Asharp3, 2);
+		slBeep(Dsharp4, 1); slBeep(Asharp3, 1.33f); slBeep(C4, 4); slBeep(D4, 1); slBeep(G3, 2); slBeep(G3, 2);
+		slBeep(C4, 1); slBeep(Asharp3, 1.33f); slBeep(Gsharp3, 4); slBeep(Asharp3, 1); slBeep(Dsharp3, 2); slBeep(Dsharp3, 2);
+		slBeep(F3, 1); slBeep(F3, 1.33f); slBeep(G3, 4); slBeep(Gsharp3, 1); slBeep(Gsharp3, 2); slBeep(Asharp3, 2);
+		slBeep(C4, 1); slBeep(D4, 2); slBeep(Dsharp4, 2); slBeep(F4, 0.66f); slBeep(Asharp3, 2);
+		slBeep(G4, 1); slBeep(F4, 1.33f); slBeep(Dsharp4, 4); slBeep(F4, 1); slBeep(D4, 2); slBeep(Asharp3, 2);
+		slBeep(Dsharp4, 1); slBeep(D4, 1.33f); slBeep(C4, 4); slBeep(D4, 1); slBeep(G3, 2); slBeep(G3, 2);
+		slBeep(C4, 1); slBeep(Asharp3, 1.33f); slBeep(Gsharp3, 4); slBeep(Asharp3, 1); slBeep(Dsharp3, 1.33f); slBeep(Dsharp3, 4);
+		slBeep(Dsharp4, 1); slBeep(D4, 1.33f); slBeep(C4, 4); slBeep(Asharp3, 2); slBeep(D4, 2); slBeep(Dsharp4, 2); slBeep(F4, 2);
+		slBeep(G4, 0.5f); slBeep(Asharp4, 2); slBeep(Dsharp4, 2); slBeep(D4, 2); slBeep(Dsharp4, 2);
+		slBeep(F4, 2); slBeep(Asharp4, 4); slBeep(Asharp4, 8); slBeep(Asharp4, 8); slBeep(Asharp4, 2); slBeep(Asharp3, 2); slBeep(Asharp3, 2); slBeep(D4, 2); slBeep(Dsharp4, 2); slBeep(F4, 2);
+		slBeep(Dsharp4, 0.5f); slBeep(G4, 2); slBeep(C4, 2); slBeep(Asharp3, 2); slBeep(C4, 2);
+		slBeep(D4, 2); slBeep(G4, 4); slBeep(G4, 8); slBeep(G4, 8); slBeep(G4, 2); slBeep(G3, 2); slBeep(G3, 2); slBeep(Asharp3, 2); slBeep(C4, 2); slBeep(D4, 2);
+		slBeep(Dsharp4, 1); slBeep(C4, 1.33f); slBeep(D4, 4); slBeep(Dsharp4, 1); slBeep(C4, 1.33f); slBeep(D4, 4);
+		slBeep(Dsharp4, 1); slBeep(C4, 2); slBeep(Dsharp4, 2); slBeep(Gsharp4, 2); slBeep(Gsharp4, 4); slBeep(Gsharp4, 8); slBeep(Gsharp4, 8); slBeep(Gsharp4, 2); slBeep(Gsharp4, 2);
+		slBeep(Gsharp4, 0.5f); slBeep(G4, 2); slBeep(F4, 2); slBeep(Dsharp4, 2); slBeep(F4, 2);
+		slBeep(G4, 0.66f); slBeep(Dsharp4, 2); slBeep(Dsharp4, 2); slBeep(Asharp3, 4); slBeep(Asharp3, 4); slBeep(Asharp3, 2); slBeep(Asharp3, 2);
+		slBeep(F4, 1); slBeep(C4, 1); slBeep(Dsharp4, 2); slBeep(D4, 2); slBeep(C4, 2); slBeep(D4, 2);
+		slBeep(Dsharp4, 0.66f); slBeep(C4, 2); slBeep(C4, 2); slBeep(G3, 2); slBeep(Asharp2, 2); slBeep(G3, 2);
+		slBeep(Dsharp4, 1); slBeep(D4, 1.33f); slBeep(C4, 4); slBeep(Asharp3, 1); slBeep(Dsharp3, 2); slBeep(Dsharp3, 2);
+		slBeep(Asharp3, 0.5f); slBeep(C4); slBeep(D4);
+		slBeep(Dsharp4, 0.25f);
+
+		return 0;
 	}
 
 	static DWORD WINAPI musicAllStar(LPVOID lpParam = 0)
@@ -3180,65 +3230,70 @@ public:
     static LPDWORD t;
 	static HANDLE t0;
 
-    void play(TrackName a)
-        {
-            try { TerminateThread(t0, 0); }
-			catch (...) {}
-            switch (a)
-            {
-                case SMBDie:
-					t0 = CreateThread(NULL, 0, musicSMBDie, 0, 0, t);
-                    break;
-                case SMBWin:
-					t0 = CreateThread(NULL, 0, musicSMBWin, 0, 0, t);
-                    break;
-                case NSMBBGM:
-					t0 = CreateThread(NULL, 0, musicNSMBBGM, 0, 0, t);
-                    break;
-                case SMDDie:
-					t0 = CreateThread(NULL, 0, musicSMBDieBass, 0, 0, t);
-                    break;
-                case SMDWin:
-					t0 = CreateThread(NULL, 0, musicSMDWin, 0, 0, t);
-                    break;
-                case Sonic1GHZ:
-					t0 = CreateThread(NULL, 0, musicS1GHZ, 0, 0, t);
-                    break;
-                case ReconstructingMoreScience:
-					t0 = CreateThread(NULL, 0, musicReconstructScience, 0, 0, t);
-                    break;
-                case YourPreciousMoon:
-					t0 = CreateThread(NULL, 0, musicPreciousMoon, 0, 0, t);
-                    break;
-                case MagicRoundabout:
-					t0 = CreateThread(NULL, 0, musicMagicRnd, 0, 0, t);
-                    break;
-                case AllStar:
-					t0 = CreateThread(NULL, 0, musicAllStar, 0, 0, t);
-                    break;
-				case Umaru:
-					t0 = CreateThread(NULL, 0, musicUMR, 0, 0, t);
-					break;
-				case Futurama:
-					t0 = CreateThread(NULL, 0, musicFut, 0, 0, t);
-					break;
-				case PinkPanther:
-					t0 = CreateThread(NULL, 0, musicPP, 0, 0, t);
-					break;
-				case DarkKnightRises:
-					t0 = CreateThread(NULL, 0, musicDarkKnight, 0, 0, t);
-					break;
-				case SMBCastleWin:
-					t0 = CreateThread(NULL, 0, musicSMBCastleWin, 0, 0, t);
-					break;
-				case SMBCastleDie:
-					t0 = CreateThread(NULL, 0, musicSMBCastleDie, 0, 0, t);
-					break;
-                default:
-					TerminateThread(t0, 0);
-                    break;
-            }
-        }
+	// AntiTempo will only be applied to National Anthems.
+    void play(TrackName a, int NatAnthemAntiTempo = 750)
+    {
+		int*b = new int(NatAnthemAntiTempo);
+        try { TerminateThread(t0, 0); }
+		catch (...) {}
+		switch (a)
+		{
+		case SMBDie:
+			t0 = CreateThread(NULL, 0, musicSMBDie, 0, 0, t);
+			break;
+		case SMBWin:
+			t0 = CreateThread(NULL, 0, musicSMBWin, 0, 0, t);
+			break;
+		case NSMBBGM:
+			t0 = CreateThread(NULL, 0, musicNSMBBGM, 0, 0, t);
+			break;
+		case SMDDie:
+			t0 = CreateThread(NULL, 0, musicSMBDieBass, 0, 0, t);
+			break;
+		case SMDWin:
+			t0 = CreateThread(NULL, 0, musicSMDWin, 0, 0, t);
+			break;
+		case Sonic1GHZ:
+			t0 = CreateThread(NULL, 0, musicS1GHZ, 0, 0, t);
+			break;
+		case ReconstructingMoreScience:
+			t0 = CreateThread(NULL, 0, musicReconstructScience, 0, 0, t);
+			break;
+		case YourPreciousMoon:
+			t0 = CreateThread(NULL, 0, musicPreciousMoon, 0, 0, t);
+			break;
+		case MagicRoundabout:
+			t0 = CreateThread(NULL, 0, musicMagicRnd, 0, 0, t);
+			break;
+		case AllStar:
+			t0 = CreateThread(NULL, 0, musicAllStar, 0, 0, t);
+			break;
+		case Umaru:
+			t0 = CreateThread(NULL, 0, musicUMR, 0, 0, t);
+			break;
+		case Futurama:
+			t0 = CreateThread(NULL, 0, musicFut, 0, 0, t);
+			break;
+		case PinkPanther:
+			t0 = CreateThread(NULL, 0, musicPP, 0, 0, t);
+			break;
+		case DarkKnightRises:
+			t0 = CreateThread(NULL, 0, musicDarkKnight, 0, 0, t);
+			break;
+		case SMBCastleWin:
+			t0 = CreateThread(NULL, 0, musicSMBCastleWin, 0, 0, t);
+			break;
+		case SMBCastleDie:
+			t0 = CreateThread(NULL, 0, musicSMBCastleDie, 0, 0, t);
+			break;
+		case NARussia:
+			t0 = CreateThread(NULL, 0, musicStateAnthemOfTheRussianFederation, b, 0, t);
+			break;
+		default:
+			TerminateThread(t0, 0);
+			break;
+		}
+    }
 };
 #endif
 
