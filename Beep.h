@@ -483,7 +483,7 @@ public:
 		tempo = initTempo;
 		return 0;
 	}
-	// contains one verse. play/wait two times for two verses. accepts int* anti-tempo
+	// contains one verse. play/wait two times for two verses. accepts int* anti-tempo.
 	static DWORD WINAPI musicGSTQ(LPVOID lpParam = 0)
 	{
 		float initTempo = tempo; if (lpParam != 0) tempo = *(int*)lpParam;
@@ -2753,7 +2753,7 @@ public:
     static LPDWORD t;
 	static HANDLE t0;
 
-	// AntiTempo will only be applied to National Anthems.
+	// AntiTempo will only be applied to National Anthems. GSTQ is typically played faster than other NAs so I'd recommend calling it with 600
     void play(TrackName a, int NatAnthemAntiTempo = 750)
     {
 		int*b = new int(NatAnthemAntiTempo);
