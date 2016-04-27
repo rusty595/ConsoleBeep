@@ -17,7 +17,7 @@
 // (If the code page it tells you appears to be wrong, e.g. it returns 437 but prints ¦ instead of left half block, run chcp followed by the correct code page, e.g. chcp 850)
 //
 // usage example:
-//	SoundLib::Instance()->play(SoundLib::AllStar);
+//	SoundLib::Instance()->play(SoundLib::AllStar); // play automatically puts the song on a new thread, calling a musicX method directly will hang your program until it finishes
 //  WaitForSingleObject(SoundLib::t0, INFINITE);
 class SoundLib
 {
@@ -124,7 +124,7 @@ public:
 		Beep(n, l);
     }
 
-	enum TrackName { SMBDie, SMBWin, NSMBBGM, SMDDie, SMDWin, Sonic1GHZ, ReconstructingMoreScience, YourPreciousMoon, MagicRoundabout, AllStar, Umaru, Futurama, PinkPanther, DarkKnightRises, SMBCastleWin, SMBCastleDie, NARussia, NACommonwealth, Stop };
+	enum TrackName { SMBDie, SMBWin, NSMBBGM, SMDDie, SMDWin, Sonic1GHZ, ReconstructingMoreScience, YourPreciousMoon, MagicRoundabout, AllStar, Umaru, Futurama, PinkPanther, DarkKnightRises, SMBCastleWin, SMBCastleDie, NARussia, NACommonwealth, NAUSA, Stop };
 
 	static DWORD WINAPI musicSMBDie(LPVOID lpParam = 0) { float initTempo = tempo; tempo = 600.0f; slBeep(B3, 4); slBeep(F4, 2); slBeep(F4, 4); slBeep(F4, 3); slBeep(E4, 3); slBeep(D4, 3); slBeep(C4, 4); slBeep(E3, 2); slBeep(E3, 4); slBeep(C3, 2); tempo = initTempo; return 0; }
 	static DWORD WINAPI musicSMBWin(LPVOID lpParam = 0) { float initTempo = tempo; tempo = 600.0f; slBeep(G2, 3); slBeep(C3, 3); slBeep(E3, 3); slBeep(G3, 3); slBeep(C4, 3); slBeep(E4, 3); slBeep(G4, 1); slBeep(E4, 1); slBeep(Gsharp2, 3); slBeep(C3, 3); slBeep(Dsharp3, 3); slBeep(Gsharp3, 3); slBeep(C4, 3); slBeep(Dsharp4, 3); slBeep(Gsharp4, 1); slBeep(Dsharp4, 1); slBeep(Asharp2, 3); slBeep(D3, 3); slBeep(F3, 3); slBeep(Asharp3, 3); slBeep(D4, 3); slBeep(F4, 3); slBeep(Asharp4, 1); slBeep(Asharp4, 3); slBeep(Asharp4, 3); slBeep(Asharp4, 3); slBeep(C5, 0.5f); tempo = initTempo; return 0; }
@@ -398,10 +398,11 @@ public:
 		}
 	}
 
-	// passing this a variable will change the anti-tempo it is played at
+	// passing this an int* to change the anti-tempo it is played at
 	static DWORD WINAPI musicStateAnthemOfTheRussianFederation(LPVOID lpParam = 0)
 	{
-		if (lpParam != 0) tempo = *(int*)lpParam;
+		float initTempo = tempo; if (lpParam != 0) tempo = *(int*)lpParam;
+
 		slBeep(Dsharp4, 0.5f); slBeep(R, 2); slBeep(Asharp3, 2);
 		slBeep(Dsharp4, 1); slBeep(Asharp3, 1.33f); slBeep(C4, 4); slBeep(D4, 1); slBeep(G3, 2); slBeep(G3, 2);
 		slBeep(C4, 1); slBeep(Asharp3, 1.33f); slBeep(Gsharp3, 4); slBeep(Asharp3, 1); slBeep(Dsharp3, 2); slBeep(Dsharp3, 2);
@@ -445,6 +446,49 @@ public:
 		slBeep(Asharp3, 0.5f); slBeep(C4); slBeep(D4);
 		slBeep(Dsharp4, 0.25f);
 
+		tempo = initTempo;
+		return 0;
+	}
+	// contains one verse. play/wait three times for three verses. accepts int* anti-tempo
+	static DWORD WINAPI musicStarSpangledBanner(LPVOID lpParam = 0)
+	{
+		float initTempo = tempo; if (lpParam != 0) tempo = *(int*)lpParam;
+
+		slBeep(F, 2); slBeep(D, 2);
+		slBeep(Asharp2); slBeep(D); slBeep(F);
+		slBeep(Asharp, 0.5f); slBeep(D4, 2); slBeep(C4, 2);
+		slBeep(Asharp); slBeep(D); slBeep(E);
+		slBeep(F, 0.5f); slBeep(F, 2); slBeep(F, 2);
+		slBeep(D4); slBeep(C4); slBeep(Asharp);
+		slBeep(A, 0.5f); slBeep(G, 2); slBeep(A, 2);
+		slBeep(Asharp); slBeep(Asharp); slBeep(F);
+		slBeep(D); slBeep(Asharp2); slBeep(F, 2); slBeep(D, 2);
+		slBeep(Asharp2); slBeep(D); slBeep(F);
+		slBeep(Asharp, 0.5f); slBeep(D4, 2); slBeep(C4, 2);
+		slBeep(Asharp); slBeep(D); slBeep(E);
+		slBeep(F, 0.5f); slBeep(F, 2); slBeep(F, 2);
+		slBeep(D4); slBeep(C4); slBeep(Asharp);
+		slBeep(A, 0.5f); slBeep(G, 2); slBeep(A, 2);
+		slBeep(Asharp); slBeep(Asharp); slBeep(F);
+		slBeep(D); slBeep(Asharp2); slBeep(D4, 2); slBeep(D4, 2);
+		slBeep(D4); slBeep(Dsharp4); slBeep(F4);
+		slBeep(F4, 0.5f); slBeep(Dsharp4, 2); slBeep(D4, 2);
+		slBeep(C4); slBeep(D4); slBeep(Dsharp4);
+		slBeep(Dsharp4, 0.5f); slBeep(Dsharp4);
+		slBeep(D4); slBeep(C4); slBeep(Asharp);
+		slBeep(A, 0.5f); slBeep(G, 2); slBeep(A, 2);
+		slBeep(Asharp); slBeep(D); slBeep(E);
+		slBeep(F, 0.5f); slBeep(F);
+		slBeep(Asharp); slBeep(Asharp); slBeep(Asharp, 2); slBeep(A, 2);
+		slBeep(G); slBeep(G); slBeep(G);
+		slBeep(C4); slBeep(Dsharp4, 2); slBeep(D4, 2); slBeep(C4, 2); slBeep(Asharp, 2);
+		slBeep(Asharp); slBeep(A); slBeep(F, 2); slBeep(F, 2);
+		slBeep(Asharp, 0.66f); slBeep(C4, 2); slBeep(D4, 2); slBeep(Dsharp4, 2);
+		slBeep(F4, 0.5f); slBeep(Asharp, 2); slBeep(C4, 2);
+		slBeep(D4, 0.66f); slBeep(Dsharp4, 2); slBeep(C4);
+		slBeep(Asharp, 0.5f);
+
+		tempo = initTempo;
 		return 0;
 	}
 
@@ -3288,6 +3332,9 @@ public:
 			break;
 		case NARussia:
 			t0 = CreateThread(NULL, 0, musicStateAnthemOfTheRussianFederation, b, 0, t);
+			break;
+		case NAUSA:
+			t0 = CreateThread(NULL, 0, musicStarSpangledBanner, b, 0, t);
 			break;
 		default:
 			TerminateThread(t0, 0);
