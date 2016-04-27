@@ -483,6 +483,30 @@ public:
 		tempo = initTempo;
 		return 0;
 	}
+	// contains one verse. play/wait two times for two verses. accepts int* anti-tempo
+	static DWORD WINAPI musicGSTQ(LPVOID lpParam = 0)
+	{
+		float initTempo = tempo; if (lpParam != 0) tempo = *(int*)lpParam;
+
+		slBeep(G); slBeep(G); slBeep(A);
+		slBeep(Fsharp, 0.66f); slBeep(G, 2); slBeep(A);
+		slBeep(B); slBeep(B); slBeep(C4);
+		slBeep(B, 0.66f); slBeep(A, 2); slBeep(G);
+		slBeep(A); slBeep(G); slBeep(Fsharp);
+		slBeep(G, 0.33f);
+
+		slBeep(D4); slBeep(D4); slBeep(D4);
+		slBeep(D4, 0.66f); slBeep(C4, 2); slBeep(B);
+		slBeep(C4); slBeep(C4); slBeep(C4);
+		slBeep(C4, 0.66f); slBeep(B, 2); slBeep(A);
+		slBeep(B); slBeep(C4, 2); slBeep(B, 2); slBeep(A, 2); slBeep(G, 2);
+		slBeep(B, 0.66f); slBeep(C4, 2); slBeep(D4);
+		slBeep(E4, 2); slBeep(C4, 2); slBeep(B); slBeep(A);
+		slBeep(G, 0.33f);
+
+		tempo = initTempo;
+		return 0;
+	}
 
 	static DWORD WINAPI musicAllStar(LPVOID lpParam = 0)
         {
@@ -2790,6 +2814,9 @@ public:
 			break;
 		case NAUSA:
 			t0 = CreateThread(NULL, 0, musicStarSpangledBanner, b, 0, t);
+			break;
+		case NACommonwealth:
+			t0 = CreateThread(NULL, 0, musicGSTQ, b, 0, t);
 			break;
 		default:
 			TerminateThread(t0, 0);
