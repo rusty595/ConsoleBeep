@@ -572,650 +572,650 @@ public:
 	static DWORD WINAPI musicAllStar(LPVOID lpParam = 0)
         {
             float initTempo = tempo; tempo = 550.0f;
-            std::cout << "Some";
+			
             slBeep(Fsharp);
-            std::cout << "bo";
+            
             slBeep(Csharp4, 2);
-            std::cout << "dy ";
+            
             slBeep(Asharp, 2);
-            std::cout << "once ";
+            
             slBeep(Asharp);
-            std::cout << "told ";
+            
             slBeep(Gsharp, 2);
-            std::cout << "me ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "the ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "world ";
+            
             slBeep(B);
-            std::cout << "is ";
+            
             slBeep(Asharp, 2);
-            std::cout << "gon";
+            
             slBeep(Asharp, 2);
-            std::cout << "na ";
+            
             slBeep(Gsharp, 2);
-            std::cout << "roll ";
+            
             slBeep(Gsharp, 2);
-            std::cout << "me,\n";
+            
             slBeep(Fsharp, 2);
             slBeep(R, 2);
 
-            std::cout << "I ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "ain't ";
+            
             slBeep(Csharp4, 2);
-            std::cout << "the ";
+            
             slBeep(Asharp, 2);
-            std::cout << "sharp";
+            
             slBeep(Asharp, 2);
-            std::cout << "est ";
+            
             slBeep(Gsharp, 2);
-            std::cout << "tool ";
+            
             slBeep(Gsharp, 2);
-            std::cout << "in ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "the ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "sh";
+            
             slBeep(Dsharp);
-            std::cout << "ed\n";
+            
             slBeep(Csharp, 0.666f);
             slBeep();
 
-            std::cout << "She ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "was ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "look";
+            
             slBeep(Csharp4, 2);
-            std::cout << "ing ";
+            
             slBeep(Asharp, 2);
-            std::cout << "kind ";
+            
             slBeep(Asharp, 2);
-            std::cout << "of ";
+            
             slBeep(Gsharp, 2);
-            std::cout << "dumb \n";
+            
             slBeep(Gsharp, 2);
-            std::cout << "with ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "her ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "fin";
+            
             slBeep(B);
-            std::cout << "ger ";
+            
             slBeep(Asharp, 2);
-            std::cout << "and ";
+            
             slBeep(Asharp, 2);
-            std::cout << "her ";
+            
             slBeep(Gsharp, 2);
-            std::cout << "thumb ";
+            
             slBeep(Gsharp, 2);
-            std::cout << "in ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "the ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "shape ";
+            
             slBeep(Csharp4);
-            std::cout << "of ";
+            
             slBeep(Asharp, 2);
-            std::cout << "an ";
+            
             slBeep(Asharp, 2);
-            std::cout << "L ";
+            
             slBeep(Gsharp);
-            std::cout << "on ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "her ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "fore";
+            
             slBeep(Gsharp);
-            std::cout << "head\n";
+            
             slBeep(Dsharp, 0.666f);
             slBeep();
 
-            std::cout << "Well, ";
+            
             slBeep(Fsharp, 1.333f);
-            std::cout << "the ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "years ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "start ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "com";
+            
             slBeep(Fsharp, 4);
-            std::cout << "ing ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "and ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "they ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "don't ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "stop ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "com";
+            
             slBeep(Fsharp, 4);
-            std::cout << "ing,\n";
-            slBeep(Fsharp, 1.333f);
-
-            std::cout << "Fed ";
-            slBeep(Fsharp, 2);
-            std::cout << "to ";
-            slBeep(Fsharp, 4);
-            std::cout << "the ";
-            slBeep(Fsharp, 4);
-            std::cout << "rules ";
-            slBeep(Fsharp, 2);
-            std::cout << "and ";
-            slBeep(Fsharp, 4);
-            std::cout << "I ";
-            slBeep(Fsharp, 4);
-            std::cout << "hit ";
-            slBeep(Fsharp, 4);
-            std::cout << "the ";
-            slBeep(Fsharp, 4);
-            std::cout << "ground ";
-            slBeep(Fsharp, 2);
-            std::cout << "run";
-            slBeep(Asharp, 4);
-            std::cout << "ning,\n";
+            
             slBeep(Fsharp, 1.333f);
 
-            std::cout << "Did";
+            
+            slBeep(Fsharp, 2);
+            
+            slBeep(Fsharp, 4);
+            
+            slBeep(Fsharp, 4);
+            
+            slBeep(Fsharp, 2);
+            
+            slBeep(Fsharp, 4);
+            
+            slBeep(Fsharp, 4);
+            
+            slBeep(Fsharp, 4);
+            
+            slBeep(Fsharp, 4);
+            
+            slBeep(Fsharp, 2);
+            
             slBeep(Asharp, 4);
-            std::cout << "n't ";
+            
+            slBeep(Fsharp, 1.333f);
+
+            
+            slBeep(Asharp, 4);
+            
             slBeep(Csharp4, 4);
-            std::cout << "make ";
+            
             slBeep(Csharp4, 2);
-            std::cout << "sense ";
+            
             slBeep(Csharp4, 2);
-            std::cout << "not ";
+            
             slBeep(B, 4);
-            std::cout << "to ";
+            
             slBeep(B, 4);
-            std::cout << "live ";
+            
             slBeep(Asharp, 2);
-            std::cout << "for ";
+            
             slBeep(Asharp, 2);
-            std::cout << "fun\n";
+            
             slBeep(Asharp, 1.333f);
 
-            std::cout << "Your ";
+            
             slBeep(Csharp, 4);
-            std::cout << "brain ";
+            
             slBeep(Asharp, 2);
-            std::cout << "gets ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "smart ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "but ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "your ";
+            
             slBeep(Dsharp, 4);
-            std::cout << "head ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "gets ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "du";
+            
             slBeep(Dsharp, 4);
-            std::cout << "mb\n";
+            
             slBeep(Csharp, 1.333f);
 
             //Bar 14
-            std::cout << "So ";
+            
             slBeep(Asharp, 4);
-            std::cout << "much ";
+            
             slBeep(Csharp4, 2);
-            std::cout << "to ";
+            
             slBeep(Asharp, 4);
-            std::cout << "do, ";
+            
             slBeep(Dsharp4, 2);
-            std::cout << "so ";
+            
             slBeep(Asharp, 4);
-            std::cout << "much ";
+            
             slBeep(Csharp4, 2);
-            std::cout << "to ";
+            
             slBeep(Asharp, 4);
-            std::cout << "see, \n";
+            
             slBeep(Dsharp4, 2);
-            std::cout << "so ";
+            
             slBeep(Asharp, 4);
-            std::cout << "what's ";
+            
             slBeep(Csharp4, 2);
-            std::cout << "wrong ";
+            
             slBeep(B, 2);
-            std::cout << "with ";
+            
             slBeep(Asharp, 2);
-            std::cout << "tak";
+            
             slBeep(Gsharp, 2);
-            std::cout << "ing ";
+            
             slBeep(Gsharp, 2);
-            std::cout << "the ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "back ";
+            
             slBeep(Gsharp, 2);
-            std::cout << "streets?\n";
+            
             slBeep(Fsharp, 2);
             slBeep(R, 1.333f);
 
-            std::cout << "You'll ";
+            
             slBeep(Csharp, 4);
-            std::cout << "ne";
+            
             slBeep(Fsharp, 4);
-            std::cout << "ver ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "know ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "if ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "you ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "don't ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "go\n";
+            
             slBeep(Fsharp);
             slBeep(R, 1.333f);
 
-            std::cout << "You'll ";
+            
             slBeep(Csharp, 4);
-            std::cout << "ne";
+            
             slBeep(Asharp, 4);
-            std::cout << "ver ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "shine ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "if ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "you ";
+            
             slBeep(Dsharp, 4);
-            std::cout << "don't ";
+            
             slBeep(Dsharp, 2);
-            std::cout << "glow\n";
+            
             slBeep(Dsharp);
             slBeep();
 
             //Bar 18
-            std::cout << "Hey ";
+            
             slBeep(Asharp, 2);
-            std::cout << "now\n";
+            
             slBeep(Fsharp);
-            std::cout << "You're ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "an ";
+            
             slBeep(Dsharp, 4);
-            std::cout << "All ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "Star\n";
+            
             slBeep(Fsharp, 2);
             slBeep(R, 2);
-            std::cout << "Get ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "your ";
+            
             slBeep(Dsharp, 4);
-            std::cout << "game ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "on\n";
-            slBeep(Fsharp, 2);
-            slBeep(R, 2);
-            std::cout << "Go ";
+            
             slBeep(Fsharp, 2);
             slBeep(R, 2);
-            std::cout << "play\n";
+            
+            slBeep(Fsharp, 2);
+            slBeep(R, 2);
+            
             slBeep(Asharp, 0.8f);
 
             //Bar 20
-            std::cout << "Hey ";
+            
             slBeep(Asharp, 2);
-            std::cout << "now\n";
+            
             slBeep(Fsharp);
-            std::cout << "You're ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "a ";
+            
             slBeep(Dsharp, 4);
-            std::cout << "rock ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "star\n";
+            
             slBeep(Fsharp, 2);
             slBeep(R, 2);
-            std::cout << "Get ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "the ";
+            
             slBeep(Dsharp, 4);
-            std::cout << "show ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "on\n";
-            slBeep(Fsharp, 2);
-            slBeep(R, 2);
-            std::cout << "Get ";
+            
             slBeep(Fsharp, 2);
             slBeep(R, 2);
-            std::cout << "paid\n";
+            
+            slBeep(Fsharp, 2);
+            slBeep(R, 2);
+            
             slBeep(Asharp, 0.8f);
 
             //Bar 22
-            std::cout << "All ";
+            
             slBeep(Asharp);
-            std::cout << "that ";
+            
             slBeep(Csharp4);
-            std::cout << "glit";
+            
             slBeep(B, 2);
-            std::cout << "ters ";
+            
             slBeep(Asharp, 2);
-            std::cout << "is ";
+            
             slBeep(Gsharp, 2);
-            std::cout << "go";
+            
             slBeep(Gsharp, 2);
-            std::cout << "ld\n";
+            
             slBeep(Fsharp, 0.5f);
 
-            std::cout << "Onl";
+            
             slBeep(Fsharp, 2);
-            std::cout << "y ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "shoot";
+            
             slBeep(Gsharp, 2);
-            std::cout << "ing ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "sta";
+            
             slBeep(Asharp, 2);
-            std::cout << "rs ";
+            
             slBeep(Gsharp, 0.8f);
-            std::cout << "break ";
+            
             slBeep(Gsharp, 2);
-            std::cout << "the ";
+            
             slBeep(Fsharp);
-            std::cout << "mo";
+            
             slBeep(Gsharp, 2);
-            std::cout << "l";
+            
             slBeep(Asharp, 2);
-            std::cout << "d\n";
+            
             slBeep(Dsharp, 0.333f);
             //
             //End chorus
             //
 
-            std::cout << "It's ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "a ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "cool ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "place, ";
+            
             slBeep(Fsharp, 2); slBeep(R, 2);
-            std::cout << "and ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "they ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "say ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "it ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "gets ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "cold";
+            
             slBeep(Fsharp, 4);
-            std::cout << "er\n";
+            
             slBeep(Fsharp, 2);
 
-            std::cout << "You're ";
+            
             slBeep(Csharp, 4);
-            std::cout << "bund";
+            
             slBeep(Fsharp, 4);
-            std::cout << "led ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "up ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "now, ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "wait ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "'til ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "you ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "get ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "old";
+            
             slBeep(Asharp, 4);
-            std::cout << "er\n";
+            
             slBeep(Fsharp, 4);
 
-            std::cout << "But ";
+            
             slBeep(Csharp, 4);
-            std::cout << "the ";
+            
             slBeep(Csharp, 4);
-            std::cout << "me";
+            
             slBeep(Asharp, 4);
-            std::cout << "te";
+            
             slBeep(Csharp4, 4);
-            std::cout << "or ";
+            
             slBeep(Csharp4, 4);
-            std::cout << "men ";
+            
             slBeep(B, 2);
-            std::cout << "beg ";
+            
             slBeep(Asharp, 2);
-            std::cout << "to ";
+            
             slBeep(Gsharp, 4);
-            std::cout << "diff";
+            
             slBeep(Gsharp, 4);
-            std::cout << "er\n";
+            
             slBeep(Fsharp, 1.333f);
-            std::cout << "Judg";
+            
             slBeep(Fsharp, 4);
-            std::cout << "ing ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "by ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "the ";
+            
             slBeep(Gsharp, 4);
-            std::cout << "hole ";
+            
             slBeep(Asharp, 2);
-            std::cout << "in ";
+            
             slBeep(Gsharp, 4);
-            std::cout << "the ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "sat";
+            
             slBeep(Gsharp, 4);
-            std::cout << "el";
+            
             slBeep(Fsharp, 4);
-            std::cout << "ite ";
+            
             slBeep(Dsharp, 2);
-            std::cout << "pic";
+            
             slBeep(Dsharp, 4);
-            std::cout << "ture\n";
+            
             slBeep(Dsharp, 2);
 
-            std::cout << "The ";
+            
             slBeep(Csharp, 4);
-            std::cout << "ice ";
+            
             slBeep(Asharp, 2);
-            std::cout << "we ";
+            
             slBeep(Csharp4, 2);
-            std::cout << "skate ";
+            
             slBeep(Dsharp4, 1.333f);
-            std::cout << "is ";
+            
             slBeep(Csharp, 4);
-            std::cout << "get";
+            
             slBeep(Asharp, 4);
-            std::cout << "ting ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "pret";
+            
             slBeep(Fsharp, 4);
-            std::cout << "ty ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "thin\n";
+            
             slBeep(Fsharp, 1.333f);
 
-            std::cout << "The ";
+            
             slBeep(Csharp, 4);
-            std::cout << "wa";
+            
             slBeep(Fsharp, 4);
-            std::cout << "ter's ";
+            
             slBeep(Gsharp, 4);
-            std::cout << "get";
+            
             slBeep(Asharp, 4);
-            std::cout << "ting ";
+            
             slBeep(Csharp4, 4);
-            std::cout << "warm ";
+            
             slBeep(B, 2);
-            std::cout << "so ";
+            
             slBeep(Asharp, 4);
-            std::cout << "you ";
+            
             slBeep(Gsharp, 4);
-            std::cout << "might ";
+            
             slBeep(Asharp, 4);
-            std::cout << "as ";
+            
             slBeep(Gsharp, 4);
-            std::cout << "well ";
+            
             slBeep(Dsharp, 2);
-            std::cout << "swim\n";
+            
             slBeep(Dsharp, 1.333f);
 
-            std::cout << "My ";
+            
             slBeep(Csharp, 4);
-            std::cout << "world's ";
+            
             slBeep(Dsharp4, 2);
-            std::cout << "on ";
+            
             slBeep(Csharp4, 2);
-            std::cout << "fi";
+            
             slBeep(Csharp4, 4);
-            std::cout << "re, ";
+            
             slBeep(Csharp4, 1.333f);
-            std::cout << "how ";
+            
             slBeep(Asharp, 4);
-            std::cout << "'bout ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "yours? \n";
+            
             slBeep(Fsharp, 0.8f);
 
-            std::cout << "But ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "that's ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "the ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "way ";
+            
             slBeep(Gsharp, 4);
-            std::cout << "I ";
+            
             slBeep(Asharp, 4);
-            std::cout << "like ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "it ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "and ";
+            
             slBeep(Gsharp, 4);
-            std::cout << "I'll ";
+            
             slBeep(Asharp, 4);
-            std::cout << "never ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "get ";
+            
             slBeep(Dsharp, 2);
-            std::cout << "bored\n";
+            
             slBeep(Dsharp, 1.333f);
             slBeep();
 
             //
             //Chorus
             //
-            std::cout << "Hey ";
+            
             slBeep(Asharp, 2);
-            std::cout << "now\n";
+            
             slBeep(Fsharp);
-            std::cout << "You're ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "an ";
+            
             slBeep(Dsharp, 4);
-            std::cout << "All ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "Star\n";
+            
             slBeep(Fsharp, 2);
             slBeep(R, 2);
-            std::cout << "Get ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "your ";
+            
             slBeep(Dsharp, 4);
-            std::cout << "game ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "on\n";
-            slBeep(Fsharp, 2);
-            slBeep(R, 2);
-            std::cout << "Go ";
+            
             slBeep(Fsharp, 2);
             slBeep(R, 2);
-            std::cout << "play\n";
+            
+            slBeep(Fsharp, 2);
+            slBeep(R, 2);
+            
             slBeep(Asharp, 0.8f);
 
-            std::cout << "Hey ";
+            
             slBeep(Asharp, 2);
-            std::cout << "now\n";
+            
             slBeep(Fsharp);
-            std::cout << "You're ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "a ";
+            
             slBeep(Dsharp, 4);
-            std::cout << "rock ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "star\n";
+            
             slBeep(Fsharp, 2);
             slBeep(R, 2);
-            std::cout << "Get ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "the ";
+            
             slBeep(Dsharp, 4);
-            std::cout << "show ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "on\n";
-            slBeep(Fsharp, 2);
-            slBeep(R, 2);
-            std::cout << "Get ";
+            
             slBeep(Fsharp, 2);
             slBeep(R, 2);
-            std::cout << "paid\n";
+            
+            slBeep(Fsharp, 2);
+            slBeep(R, 2);
+            
             slBeep(Asharp, 0.8f);
 
             //Bar 22
-            std::cout << "All ";
+            
             slBeep(Asharp);
-            std::cout << "that ";
+            
             slBeep(Csharp4);
-            std::cout << "glit";
+            
             slBeep(B, 2);
-            std::cout << "ters ";
+            
             slBeep(Asharp, 2);
-            std::cout << "is ";
+            
             slBeep(Gsharp, 2);
-            std::cout << "go";
+            
             slBeep(Gsharp, 2);
-            std::cout << "ld\n";
+            
             slBeep(Fsharp, 0.5f);
 
-            std::cout << "Onl";
+            
             slBeep(Fsharp, 2);
-            std::cout << "y ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "shoot";
+            
             slBeep(Gsharp, 2);
-            std::cout << "ing ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "sta";
+            
             slBeep(Asharp, 2);
-            std::cout << "rs ";
+            
             slBeep(Gsharp, 0.8f);
-            std::cout << "break ";
+            
             slBeep(Gsharp, 2);
-            std::cout << "the ";
+            
             slBeep(Fsharp);
-            std::cout << "mo";
+            
             slBeep(Gsharp, 2);
-            std::cout << "l";
+            
             slBeep(Asharp, 2);
-            std::cout << "d\n";
+            
             slBeep(Dsharp, 0.333f);
             //
             //End chorus
             //
 
             //instrumental solo
-            std::cout << "*whistling*\n";
+            
             for (byte b0 = 0; b0 < 4; b0++)
             {
                 slBeep(Csharp5); slBeep(Asharp4); slBeep(Gsharp4, 2); slBeep(Fsharp4, 2); slBeep(R, 2);
@@ -1225,87 +1225,87 @@ public:
             //
             //Chorus ed2
             //
-            std::cout << "Hey ";
+            
             slBeep(Asharp, 2);
-            std::cout << "now\n";
+            
             slBeep(Fsharp);
-            std::cout << "You're ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "an ";
+            
             slBeep(Dsharp, 4);
-            std::cout << "All ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "Star\n";
+            
             slBeep(Fsharp, 2);
             slBeep(R, 2);
-            std::cout << "Get ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "your ";
+            
             slBeep(Dsharp, 4);
-            std::cout << "game ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "on\n";
-            slBeep(Fsharp, 2);
-            slBeep(R, 2);
-            std::cout << "Go ";
+            
             slBeep(Fsharp, 2);
             slBeep(R, 2);
-            std::cout << "play\n";
+            
+            slBeep(Fsharp, 2);
+            slBeep(R, 2);
+            
             slBeep(Asharp, 0.8f);
 
-            std::cout << "Hey ";
+            
             slBeep(Asharp, 2);
-            std::cout << "now\n";
+            
             slBeep(Fsharp);
-            std::cout << "You're ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "a ";
+            
             slBeep(Dsharp, 4);
-            std::cout << "rock ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "star\n";
+            
             slBeep(Fsharp, 2);
             slBeep(R, 2);
-            std::cout << "Get ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "the ";
+            
             slBeep(Dsharp, 4);
-            std::cout << "show ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "on\n";
-            slBeep(Fsharp, 2);
-            slBeep(R, 2);
-            std::cout << "Get ";
+            
             slBeep(Fsharp, 2);
             slBeep(R, 2);
-            std::cout << "paid\n";
+            
+            slBeep(Fsharp, 2);
+            slBeep(R, 2);
+            
             slBeep(Asharp, 0.8f);
 
             //Bar 54
-            std::cout << "All ";
+            
             slBeep(Asharp);
-            std::cout << "that ";
+            
             slBeep(Csharp4);
-            std::cout << "glit";
+            
             slBeep(B, 2);
-            std::cout << "ters ";
+            
             slBeep(Csharp4, 2);
-            std::cout << "is ";
+            
             slBeep(Dsharp4, 2);
-            std::cout << "gold\n";
+            
             slBeep(Fsharp4, 0.4f);
 
-            std::cout << "Onl";
+            
             slBeep(Fsharp, 2);
-            std::cout << "y ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "shoot";
+            
             slBeep(Gsharp, 2);
-            std::cout << "ing ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "sta";
+            
             slBeep(Asharp, 2);
-            std::cout << "rs \n";
+            
             slBeep(Gsharp, 0.666f);
             //
             //End chorus ed2
@@ -1313,269 +1313,269 @@ public:
 
             slBeep();
 
-            std::cout << "Some";
+            
             slBeep(Fsharp);
-            std::cout << "bo";
+            
             slBeep(Csharp4, 2);
-            std::cout << "dy ";
+            
             slBeep(Asharp, 2);
-            std::cout << "once ";
+            
             slBeep(Asharp);
-            std::cout << "asked ";
+            
             slBeep(Gsharp, 2);
-            std::cout << "could ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "I ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "spare ";
+            
             slBeep(B);
-            std::cout << "some ";
+            
             slBeep(Asharp, 2);
-            std::cout << "change ";
+            
             slBeep(Asharp, 2);
-            std::cout << "for ";
+            
             slBeep(Gsharp, 2);
-            std::cout << "gas\n";
+            
             slBeep(Gsharp, 2);
 
-            std::cout << "I ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "need ";
+            
             slBeep(Gsharp, 2);
-            std::cout << "to ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "get ";
+            
             slBeep(Csharp4, 2);
-            std::cout << "my";
+            
             slBeep(Asharp, 2);
-            std::cout << "self ";
+            
             slBeep(Asharp, 2);
-            std::cout << "a";
+            
             slBeep(Gsharp, 2);
-            std::cout << "way ";
+            
             slBeep(Gsharp, 2);
-            std::cout << "from ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "this ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "pla";
+            
             slBeep(Dsharp);
-            std::cout << "ce\n";
+            
             slBeep(Csharp, 0.666f);
             slBeep();
 
-            std::cout << "I ";
+            
             slBeep(Csharp4, 4);
-            std::cout << "said ";
+            
             slBeep(Csharp4, 1.333f);
-            std::cout << "yep, ";
+            
             slBeep(Csharp4);
-            std::cout << "what ";
+            
             slBeep(Asharp, 4);
-            std::cout << "a ";
+            
             slBeep(Gsharp, 4);
-            std::cout << "con";
+            
             slBeep(Asharp, 2);
-            std::cout << "cept\n";
+            
             slBeep(Gsharp);
-            std::cout << "I ";
+            
             slBeep(Gsharp, 4);
-            std::cout << "could ";
+            
             slBeep(Csharp4, 1.333f);
-            std::cout << "use ";
+            
             slBeep(B, 4);
-            std::cout << "a ";
+            
             slBeep(Asharp, 4);
-            std::cout << "lit";
+            
             slBeep(B, 4);
-            std::cout << "tle ";
+            
             slBeep(Asharp, 4);
-            std::cout << "fuel ";
+            
             slBeep(B, 2);
-            std::cout << "my";
+            
             slBeep(Fsharp, 2);
-            std::cout << "self,\n";
+            
             slBeep(Dsharp, 2);
-            std::cout << "And ";
+            
             slBeep(Csharp, 2);
-            std::cout << "we ";
+            
             slBeep(Dsharp, 2);
-            std::cout << "could ";
+            
             slBeep(Csharp, 2);
-            std::cout << "all ";
+            
             slBeep(Csharp4);
-            std::cout << "use ";
+            
             slBeep(Asharp, 4);
-            std::cout << "a ";
+            
             slBeep(Asharp, 4);
-            std::cout << "lit";
+            
             slBeep(Gsharp, 2);
-            std::cout << "tle ";
+            
             slBeep(Fsharp, 2);
             slBeep(R, 2);
-            std::cout << "cha";
+            
             slBeep(Gsharp);
-            std::cout << "nge\n";
+            
             slBeep(Asharp, 0.4f);
 
-            std::cout << "Well, ";
+            
             slBeep(Csharp4, 1.333f);
-            std::cout << "the ";
+            
             slBeep(Csharp4, 4);
-            std::cout << "years ";
+            
             slBeep(Csharp4, 2);
-            std::cout << "start ";
+            
             slBeep(Csharp4, 2);
-            std::cout << "com";
+            
             slBeep(Csharp4, 4);
-            std::cout << "ing ";
+            
             slBeep(Csharp4, 4);
-            std::cout << "and ";
+            
             slBeep(Csharp4, 4);
-            std::cout << "they ";
+            
             slBeep(Csharp4, 4);
-            std::cout << "don't ";
+            
             slBeep(Csharp4, 2);
-            std::cout << "stop ";
+            
             slBeep(Csharp4, 2);
-            std::cout << "com";
+            
             slBeep(Csharp4, 4);
-            std::cout << "ing,\n";
+            
             slBeep(Csharp4, 1.333f);
 
-            std::cout << "Fed ";
+            
             slBeep(Csharp4, 2);
-            std::cout << "to ";
+            
             slBeep(Csharp4, 4);
-            std::cout << "the ";
+            
             slBeep(Csharp4, 4);
-            std::cout << "rules ";
+            
             slBeep(Csharp4, 2);
-            std::cout << "and ";
+            
             slBeep(Csharp4, 4);
-            std::cout << "I ";
+            
             slBeep(Csharp4, 4);
-            std::cout << "hit ";
+            
             slBeep(Csharp4, 4);
-            std::cout << "the ";
+            
             slBeep(Csharp4, 4);
-            std::cout << "ground ";
+            
             slBeep(Csharp4, 2);
-            std::cout << "run";
+            
             slBeep(Dsharp4, 4);
-            std::cout << "ning,\n";
+            
             slBeep(Csharp4, 1.333f);
 
-            std::cout << "Did";
+            
             slBeep(Asharp, 4);
-            std::cout << "n't ";
+            
             slBeep(Csharp4, 4);
-            std::cout << "make ";
+            
             slBeep(Csharp4, 2);
-            std::cout << "sense ";
+            
             slBeep(Csharp4, 2);
-            std::cout << "not ";
+            
             slBeep(B, 4);
-            std::cout << "to ";
+            
             slBeep(B, 4);
-            std::cout << "live ";
+            
             slBeep(Asharp, 2);
-            std::cout << "for ";
+            
             slBeep(Asharp, 2);
-            std::cout << "fun\n";
+            
             slBeep(Asharp, 1.333f);
 
-            std::cout << "Your ";
+            
             slBeep(Csharp, 4);
-            std::cout << "brain ";
+            
             slBeep(Asharp, 2);
-            std::cout << "gets ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "smart ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "but ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "your ";
+            
             slBeep(Dsharp, 4);
-            std::cout << "head ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "gets ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "du";
+            
             slBeep(Dsharp, 4);
-            std::cout << "mb\n";
+            
             slBeep(Csharp, 1.333f);
 
             //Bar 69
-            std::cout << "So ";
+            
             slBeep(Asharp, 4);
-            std::cout << "much ";
+            
             slBeep(Csharp4, 2);
-            std::cout << "to ";
+            
             slBeep(Asharp, 4);
-            std::cout << "do, ";
+            
             slBeep(Dsharp4, 2);
-            std::cout << "so ";
+            
             slBeep(Asharp, 4);
-            std::cout << "much ";
+            
             slBeep(Csharp4, 2);
-            std::cout << "to ";
+            
             slBeep(Asharp, 4);
-            std::cout << "see, \n";
+            
             slBeep(Dsharp4, 2);
-            std::cout << "so ";
+            
             slBeep(Asharp, 4);
-            std::cout << "what's ";
+            
             slBeep(Csharp4, 2);
-            std::cout << "wrong ";
+            
             slBeep(B, 2);
-            std::cout << "with ";
+            
             slBeep(Asharp, 2);
-            std::cout << "tak";
+            
             slBeep(Gsharp, 2);
-            std::cout << "ing ";
+            
             slBeep(Gsharp, 2);
-            std::cout << "the ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "back ";
+            
             slBeep(Gsharp, 2);
-            std::cout << "streets?\n";
+            
             slBeep(Fsharp, 2);
             slBeep(R, 1.333f);
 
-            std::cout << "You'll ";
+            
             slBeep(Csharp, 4);
-            std::cout << "ne";
+            
             slBeep(Fsharp, 4);
-            std::cout << "ver ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "know ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "if ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "you ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "don't ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "go\n";
+            
             slBeep(Fsharp);
             slBeep(R, 1.333f);
 
-            std::cout << "You'll ";
+            
             slBeep(Csharp, 4);
-            std::cout << "ne";
+            
             slBeep(Dsharp4, 4);
-            std::cout << "ver ";
+            
             slBeep(Csharp4, 4);
-            std::cout << "shine ";
+            
             slBeep(Csharp4, 2);
-            std::cout << "if ";
+            
             slBeep(Csharp4, 4);
-            std::cout << "you ";
+            
             slBeep(Csharp4, 4);
-            std::cout << "don't ";
+            
             slBeep(Csharp4, 2);
-            std::cout << "glow\n";
+            
             slBeep(Csharp4);
             slBeep();
 
@@ -1583,148 +1583,148 @@ public:
             //
             //Chorus ed3
             //
-            std::cout << "Hey ";
+            
             slBeep(Asharp, 2);
-            std::cout << "now\n";
+            
             slBeep(Fsharp);
-            std::cout << "You're ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "an ";
+            
             slBeep(Dsharp, 4);
-            std::cout << "All ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "Star\n";
+            
             slBeep(Fsharp, 2);
             slBeep(R, 2);
-            std::cout << "Get ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "your ";
+            
             slBeep(Dsharp, 4);
-            std::cout << "game ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "on\n";
-            slBeep(Fsharp, 2);
-            slBeep(R, 2);
-            std::cout << "Go ";
+            
             slBeep(Fsharp, 2);
             slBeep(R, 2);
-            std::cout << "play\n";
+            
+            slBeep(Fsharp, 2);
+            slBeep(R, 2);
+            
             slBeep(Asharp, 0.8f);
 
-            std::cout << "Hey ";
+            
             slBeep(Asharp, 2);
-            std::cout << "now\n";
+            
             slBeep(Fsharp);
-            std::cout << "You're ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "a ";
+            
             slBeep(Dsharp, 4);
-            std::cout << "rock ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "star\n";
+            
             slBeep(Fsharp, 2);
             slBeep(R, 2);
-            std::cout << "Get ";
+            
             slBeep(Fsharp, 4);
-            std::cout << "the ";
+            
             slBeep(Dsharp, 4);
-            std::cout << "show ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "on\n";
-            slBeep(Fsharp, 2);
-            slBeep(R, 2);
-            std::cout << "Get ";
+            
             slBeep(Fsharp, 2);
             slBeep(R, 2);
-            std::cout << "paid\n";
+            
+            slBeep(Fsharp, 2);
+            slBeep(R, 2);
+            
             slBeep(Asharp);
 
             slBeep(Csharp, 2);
             //Bar 54
-            std::cout << "All ";
+            
             slBeep(Asharp);
-            std::cout << "that ";
+            
             slBeep(Csharp4);
-            std::cout << "glit";
+            
             slBeep(B, 2);
-            std::cout << "ters ";
+            
             slBeep(Csharp4, 2);
-            std::cout << "is ";
+            
             slBeep(Dsharp4, 2);
-            std::cout << "g";
+            
             slBeep(Fsharp4, 2);
 
-            std::cout << "o";
+            
             slBeep(Gsharp4, 2);
-            std::cout << "ld\n";
+            
             slBeep(Fsharp4, 0.666f);
 
-            std::cout << "Onl";
+            
             slBeep(Fsharp, 2);
-            std::cout << "y ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "shoot";
+            
             slBeep(Gsharp, 2);
-            std::cout << "ing ";
+            
             slBeep(Fsharp, 2);
 
-            std::cout << "sta";
+            
             slBeep(Csharp4, 2);
-            std::cout << "rs ";
+            
             slBeep(Asharp, 0.666f);
-            std::cout << "break ";
+            
             slBeep(Gsharp, 2);
-            std::cout << "the ";
+            
             slBeep(Fsharp);
-            std::cout << "mo";
+            
             slBeep(Gsharp, 2);
-            std::cout << "l";
+            
             slBeep(Asharp, 2);
-            std::cout << "d\n";
+            
             slBeep(Fsharp, 0.333f);
 
             slBeep(Csharp, 2);
             //Bar 81
-            std::cout << "All ";
+            
             slBeep(Asharp);
-            std::cout << "that ";
+            
             slBeep(Csharp4);
-            std::cout << "glit";
+            
             slBeep(B, 2);
-            std::cout << "ters ";
+            
             slBeep(Csharp4, 2);
-            std::cout << "is ";
+            
             slBeep(Dsharp4, 2);
-            std::cout << "g";
+            
             slBeep(Fsharp4, 2);
 
-            std::cout << "o";
+            
             slBeep(Gsharp4, 2);
-            std::cout << "ld\n";
+            
             slBeep(Fsharp4, 0.666f);
 
-            std::cout << "Onl";
+            
             slBeep(Fsharp, 2);
-            std::cout << "y ";
+            
             slBeep(Fsharp, 2);
-            std::cout << "shoot";
+            
             slBeep(Gsharp, 2);
-            std::cout << "ing ";
+            
             slBeep(Fsharp, 2);
 
-            std::cout << "sta";
+            
             slBeep(Csharp4, 2);
-            std::cout << "rs ";
+            
             slBeep(Asharp, 0.666f);
-            std::cout << "break ";
+            
             slBeep(Gsharp, 2);
-            std::cout << "the ";
+            
             slBeep(Fsharp);
-            std::cout << "mo";
+            
             slBeep(Gsharp, 2);
-            std::cout << "l";
+            
             slBeep(Asharp, 2);
-            std::cout << "d\n";
+            
             slBeep(Dsharp, 0.286f); // seven halfs
 
             tempo = initTempo;
