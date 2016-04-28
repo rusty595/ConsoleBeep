@@ -6,6 +6,8 @@
 #include "strsafe.h"
 #include "stdio.h"
 #include <iostream>
+#include <fstream>
+#include <vector>
 
 //
 // This branch couts lyrics for All Star, USA/UK Nat Anthems
@@ -17,6 +19,7 @@ class SoundLib
 {
 private: static float tempo;
 		 static SoundLib* mInstance;
+		 
 public:
 	static SoundLib* Instance()
 	{
@@ -29,7 +32,7 @@ public:
 	}
 	SoundLib(){}
 	~SoundLib(){}
-	enum note { BELL, REST, R, C1, Csharp1, D1, Dsharp1, E1, F1, Fsharp1, G1, Gsharp1, A1, Asharp1, B1, C2, Csharp2, D2, Dsharp2, E2, F2, Fsharp2, G2, Gsharp2, A2, Asharp2, B2, C3, Csharp3, D3, Dsharp3, E3, F3, Fsharp3, G3, Gsharp3, A3, Asharp3, B3, C4, Csharp4, D4, Dsharp4, E4, F4, Fsharp4, G4, Gsharp4, A4, Asharp4, B4, C5, Csharp5, D5, Dsharp5, E5, F5, Fsharp5, G5, Gsharp5, A5, Asharp5, B5, C6, C, Csharp, D, Dsharp, E, F, Fsharp, G, Gsharp, A, Asharp, B };
+	enum note { C1, Csharp1, D1, Dsharp1, E1, F1, Fsharp1, G1, Gsharp1, A1, Asharp1, B1, C2, Csharp2, D2, Dsharp2, E2, F2, Fsharp2, G2, Gsharp2, A2, Asharp2, B2, C3, Csharp3, D3, Dsharp3, E3, F3, Fsharp3, G3, Gsharp3, A3, Asharp3, B3, C4, Csharp4, D4, Dsharp4, E4, F4, Fsharp4, G4, Gsharp4, A4, Asharp4, B4, C5, Csharp5, D5, Dsharp5, E5, F5, Fsharp5, G5, Gsharp5, A5, Asharp5, B5, C6, C, Csharp, D, Dsharp, E, F, Fsharp, G, Gsharp, A, Asharp, B, BELL, REST, R };
 	static void slBeep(note f = R, float inverseFractionOfQuarterNote = 1.0f)
     {
         int n = 50;
@@ -117,8 +120,10 @@ public:
             }
 		Beep(n, l);
     }
+	struct param { note f; float inverseFractionOfCrotchet; std::string line; };
+	static void slBeep(param slBeepParameters){ std::cout << slBeepParameters.line; slBeep(slBeepParameters.f, slBeepParameters.inverseFractionOfCrotchet); }
 
-	enum TrackName { SMBDie, SMBWin, NSMBBGM, SMDDie, SMDWin, Sonic1GHZ, ReconstructingMoreScience, YourPreciousMoon, MagicRoundabout, AllStar, Umaru, Futurama, PinkPanther, DarkKnightRises, SMBCastleWin, SMBCastleDie, NARussia, NACommonwealth, NAUSA, NALichtenstein, Dangermouse, Flinstones, NAmlp, GiddyUp, Stop };
+	enum TrackName { SMBDie, SMBWin, NSMBBGM, SMDDie, SMDWin, Sonic1GHZ, ReconstructingMoreScience, YourPreciousMoon, MagicRoundabout, AllStar, Umaru, Futurama, PinkPanther, DarkKnightRises, SMBCastleWin, SMBCastleDie, NARussia, NACommonwealth, NAUSA, NALichtenstein, Dangermouse, Flinstones, Stop };
 
 	static DWORD WINAPI musicSMBDie(LPVOID lpParam = 0) { float initTempo = tempo; tempo = 600.0f; slBeep(B3, 4); slBeep(F4, 2); slBeep(F4, 4); slBeep(F4, 3); slBeep(E4, 3); slBeep(D4, 3); slBeep(C4, 4); slBeep(E3, 2); slBeep(E3, 4); slBeep(C3, 2); tempo = initTempo; return 0; }
 	static DWORD WINAPI musicSMBWin(LPVOID lpParam = 0) { float initTempo = tempo; tempo = 600.0f; slBeep(G2, 3); slBeep(C3, 3); slBeep(E3, 3); slBeep(G3, 3); slBeep(C4, 3); slBeep(E4, 3); slBeep(G4, 1); slBeep(E4, 1); slBeep(Gsharp2, 3); slBeep(C3, 3); slBeep(Dsharp3, 3); slBeep(Gsharp3, 3); slBeep(C4, 3); slBeep(Dsharp4, 3); slBeep(Gsharp4, 1); slBeep(Dsharp4, 1); slBeep(Asharp2, 3); slBeep(D3, 3); slBeep(F3, 3); slBeep(Asharp3, 3); slBeep(D4, 3); slBeep(F4, 3); slBeep(Asharp4, 1); slBeep(Asharp4, 3); slBeep(Asharp4, 3); slBeep(Asharp4, 3); slBeep(C5, 0.5f); tempo = initTempo; return 0; }
@@ -2948,6 +2953,107 @@ public:
 			break;
 		}
     }
+
+	// Import UltraStar/UltraStarDX/Performous/MyLittleKaraoke lyric text files.
+	//
+	// A lot of these files use C1 as a base and need pitching up. Make unspeed lower to make it play faster.
+	//If a character displays incorrectly, change it in the txt file to be the Unicode character with the code point which corresponds to the code point of the correct character in the code page installed on your machine.
+	void play(char* file, note basenote = C3, float unspeed = 150.0f)
+	{
+		float initTempo = tempo;
+		tempo = unspeed;
+
+		std::ifstream inFile;
+		inFile.open(file);
+		
+		if (!inFile.good())
+		{
+			std::cout << "not there";
+		}
+		else
+		{
+			std::vector<int> startbeat;
+			std::vector<int> duration;
+			std::vector<note> pitch;
+			std::vector<std::string> lyric;
+
+			std::string input;
+			
+			int _startbeat;
+			int _duration;
+			int _pitch;
+
+			while (!inFile.eof())
+			{
+				std::getline(inFile, input);
+
+				if (input.substr(0, 1).compare(":") == 0 || input.substr(0, 1).compare("*") == 0 || input.substr(0, 1).compare("F") == 0) // note or gold note or 'freestyle syllable'
+				{
+					input = input.substr(input.find_first_of(' ') + 1);
+					_startbeat = atoi(input.substr(0, input.find_first_of(' ')).c_str());
+					startbeat.push_back(_startbeat);
+					input = input.substr(input.find_first_of(' ') + 1);
+					_duration = atoi(input.substr(0, input.find_first_of(' ')).c_str());
+					duration.push_back(_duration);
+					input = input.substr(input.find_first_of(' ') + 1);
+					_pitch = atoi(input.substr(0, input.find_first_of(' ')).c_str());
+					pitch.push_back((note)(_pitch + (int)basenote));
+					input = input.substr(input.find_first_of(' ') + 1);
+					lyric.push_back(input);
+				}
+				else if (input.substr(0, 1).compare("-") == 0) // line breaks
+				{
+					input = input.substr(input.find_first_of(' ') + 1);
+					_startbeat = atoi(input.substr(0, input.find_first_of(' ')).c_str());
+					startbeat.push_back(_startbeat);
+					duration.push_back(1);
+					pitch.push_back(REST);
+					lyric.push_back("\n");
+				}
+				else // debug out the comments
+				{
+					//std::cout << input << "\n";
+				}
+			}
+			inFile.close();
+
+			std::vector<param> toBeep;
+
+			param temp;
+
+			if (startbeat[0] > 0)
+				for (int s : startbeat)
+					s -= startbeat[0];
+
+			temp.f = pitch[0];
+			temp.inverseFractionOfCrotchet = 2.0f / duration[0];
+			temp.line = lyric[0];
+
+			toBeep.push_back(temp);
+
+			for (int b0 = 1; b0 < startbeat.size(); b0++)
+			{
+				if (startbeat[b0 - 1] + duration[b0 - 1] != startbeat[b0]) // if the previous note did not last until the current note, buffer it with a REST
+				{
+					temp.f = REST;
+					temp.inverseFractionOfCrotchet = 2.0f / (float)(startbeat[b0] - (startbeat[b0 - 1] + duration[b0 - 1]));
+					temp.line = "";
+
+					toBeep.push_back(temp);
+				}
+				temp.f = pitch[b0];
+				temp.inverseFractionOfCrotchet = 2.0f / duration[b0];
+				temp.line = lyric[b0];
+
+				toBeep.push_back(temp);
+			}
+			for (param p0 : toBeep)
+			{
+				slBeep(p0);
+			}
+		}
+		tempo = initTempo;
+	}
 };
 #endif
 
