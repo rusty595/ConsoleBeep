@@ -8,6 +8,8 @@
 #include <iostream>
 
 //
+// This branch couts lyrics for All Star, USA/UK Nat Anthems
+//
 // usage example:
 //	SoundLib::Instance()->play(SoundLib::AllStar); // play automatically puts the song on a new thread, calling a musicX method directly will hang your program until it finishes
 //  WaitForSingleObject(SoundLib::t0, INFINITE);
@@ -502,68 +504,124 @@ public:
 		tempo = initTempo;
 		return 0;
 	}
-	// contains one verse. play/wait three times for three verses. accepts int* anti-tempo
+	// only contains verse one. accepts int* anti-tempo
 	static DWORD WINAPI musicStarSpangledBanner(LPVOID lpParam = 0)
 	{
 		float initTempo = tempo; if (lpParam != 0) tempo = *(int*)lpParam;
 
-		slBeep(F, 2); slBeep(D, 2);
-		slBeep(Asharp2); slBeep(D); slBeep(F);
-		slBeep(Asharp, 0.5f); slBeep(D4, 2); slBeep(C4, 2);
-		slBeep(Asharp); slBeep(D); slBeep(E);
-		slBeep(F, 0.5f); slBeep(F, 2); slBeep(F, 2);
-		slBeep(D4); slBeep(C4); slBeep(Asharp);
-		slBeep(A, 0.5f); slBeep(G, 2); slBeep(A, 2);
-		slBeep(Asharp); slBeep(Asharp); slBeep(F);
-		slBeep(D); slBeep(Asharp2); slBeep(F, 2); slBeep(D, 2);
-		slBeep(Asharp2); slBeep(D); slBeep(F);
-		slBeep(Asharp, 0.5f); slBeep(D4, 2); slBeep(C4, 2);
-		slBeep(Asharp); slBeep(D); slBeep(E);
-		slBeep(F, 0.5f); slBeep(F, 2); slBeep(F, 2);
-		slBeep(D4); slBeep(C4); slBeep(Asharp);
-		slBeep(A, 0.5f); slBeep(G, 2); slBeep(A, 2);
-		slBeep(Asharp); slBeep(Asharp); slBeep(F);
-		slBeep(D); slBeep(Asharp2); slBeep(D4, 2); slBeep(D4, 2);
-		slBeep(D4); slBeep(Dsharp4); slBeep(F4);
-		slBeep(F4, 0.5f); slBeep(Dsharp4, 2); slBeep(D4, 2);
-		slBeep(C4); slBeep(D4); slBeep(Dsharp4);
-		slBeep(Dsharp4, 0.5f); slBeep(Dsharp4);
-		slBeep(D4); slBeep(C4); slBeep(Asharp);
-		slBeep(A, 0.5f); slBeep(G, 2); slBeep(A, 2);
-		slBeep(Asharp); slBeep(D); slBeep(E);
-		slBeep(F, 0.5f); slBeep(F);
-		slBeep(Asharp); slBeep(Asharp); slBeep(Asharp, 2); slBeep(A, 2);
-		slBeep(G); slBeep(G); slBeep(G);
-		slBeep(C4); slBeep(Dsharp4, 2); slBeep(D4, 2); slBeep(C4, 2); slBeep(Asharp, 2);
-		slBeep(Asharp); slBeep(A); slBeep(F, 2); slBeep(F, 2);
-		slBeep(Asharp, 0.66f); slBeep(C4, 2); slBeep(D4, 2); slBeep(Dsharp4, 2);
-		slBeep(F4, 0.5f); slBeep(Asharp, 2); slBeep(C4, 2);
-		slBeep(D4, 0.66f); slBeep(Dsharp4, 2); slBeep(C4);
-		slBeep(Asharp, 0.5f);
+		std::cout << "O"; slBeep(F, 2); std::cout << "h,"; slBeep(D, 2);
+		std::cout << " say,"; slBeep(Asharp2); std::cout << " can" ; slBeep(D); std::cout << " you" ; slBeep(F);
+		std::cout << " see," ; slBeep(Asharp, 0.5f); std::cout << " by" ; slBeep(D4, 2); std::cout << " the" ; slBeep(C4, 2);
+		std::cout << " dawn's" ; slBeep(Asharp); std::cout << " ear"; slBeep(D); std::cout << "ly" ; slBeep(E);
+		std::cout << " light,"; slBeep(F, 0.5f); std::cout << " \nWhat" ; slBeep(F, 2); std::cout << " so" ; slBeep(F, 2);
+		std::cout << " proud"; slBeep(D4); std::cout << "ly" ; slBeep(C4); std::cout << " we" ; slBeep(Asharp);
+		std::cout << " hailed" ; slBeep(A, 0.5f); std::cout << " at" ; slBeep(G, 2); std::cout << " the" ; slBeep(A, 2);
+		std::cout << " twi"; slBeep(Asharp); std::cout << "light's" ; slBeep(Asharp); std::cout << " last" ; slBeep(F);
+		std::cout << " gleam"; slBeep(D); std::cout << "ing?"; slBeep(Asharp2); std::cout << "\nWhose" ; slBeep(F, 2); std::cout << " broad" ; slBeep(D, 2);
+		std::cout << " stripes" ; slBeep(Asharp2); std::cout << " and" ; slBeep(D); std::cout << " bright" ; slBeep(F);
+		std::cout << " stars," ; slBeep(Asharp, 0.5f); std::cout << " through"; slBeep(D4, 2); std::cout << " the"; slBeep(C4, 2);
+		std::cout << " per"; slBeep(Asharp); std::cout << "il"; slBeep(D); std::cout << "ous"; slBeep(E);
+		std::cout << " fight,"; slBeep(F, 0.5f); std::cout << "\nO'er"; slBeep(F, 2); std::cout << " the"; slBeep(F, 2);
+		std::cout << " ram"; slBeep(D4); std::cout << "parts"; slBeep(C4); std::cout << " we"; slBeep(Asharp);
+		std::cout << " watched"; slBeep(A, 0.5f); std::cout << " were"; slBeep(G, 2); std::cout << " so"; slBeep(A, 2);
+		std::cout << " gal"; slBeep(Asharp); std::cout << "ant"; slBeep(Asharp); std::cout << "ly"; slBeep(F);
+		std::cout << " stream"; slBeep(D); std::cout << "ing?"; slBeep(Asharp2); std::cout << "\nAnd"; slBeep(D4, 2); std::cout << " the"; slBeep(D4, 2);
+		std::cout << " rock"; slBeep(D4); std::cout << "et's"; slBeep(Dsharp4); std::cout << " red"; slBeep(F4);
+		std::cout << " glare,"; slBeep(F4, 0.5f); std::cout << " the"; slBeep(Dsharp4, 2); std::cout << " bombs"; slBeep(D4, 2);
+		std::cout << " burst"; slBeep(C4); std::cout << "ing"; slBeep(D4); std::cout << " in"; slBeep(Dsharp4);
+		std::cout << " air,"; slBeep(Dsharp4, 0.5f); std::cout << "\nGave"; slBeep(Dsharp4);
+		std::cout << " proof"; slBeep(D4); std::cout << " through"; slBeep(C4); std::cout << " the"; slBeep(Asharp);
+		std::cout << " night"; slBeep(A, 0.5f); std::cout << " that"; slBeep(G, 2); std::cout << " our"; slBeep(A, 2);
+		std::cout << " flag"; slBeep(Asharp); std::cout << " was"; slBeep(D); std::cout << " still"; slBeep(E);
+		std::cout << " there."; slBeep(F, 0.5f); std::cout << "\nOh,"; slBeep(F);
+		std::cout << " say,"; slBeep(Asharp); std::cout << " does"; slBeep(Asharp); std::cout << " tha"; slBeep(Asharp, 2); std::cout << "t"; slBeep(A, 2);
+		std::cout << " star"; slBeep(G); std::cout << " span"; slBeep(G); std::cout << "gled"; slBeep(G);
+		std::cout << " ban"; slBeep(C4); std::cout << "ne"; slBeep(Dsharp4, 2); std::cout << "r"; slBeep(D4, 2); std::cout << " ye"; slBeep(C4, 2); std::cout << "t"; slBeep(Asharp, 2);
+		std::cout << " wa"; slBeep(Asharp); std::cout << "ve"; slBeep(A); std::cout << "\nO'er"; slBeep(F, 2); std::cout << " the"; slBeep(F, 2);
+		std::cout << " la"; slBeep(Asharp, 0.66f); std::cout << "nd"; slBeep(C4, 2); std::cout << " of"; slBeep(D4, 2); std::cout << " the"; slBeep(Dsharp4, 2);
+		std::cout << " free"; slBeep(F4, 0.5f); std::cout << " and"; slBeep(Asharp, 2); std::cout << " the"; slBeep(C4, 2);
+		std::cout << " home"; slBeep(D4, 0.66f); std::cout << " of"; slBeep(Dsharp4, 2); std::cout << " the"; slBeep(C4);
+		std::cout << " brave?"; slBeep(Asharp, 0.5f);
 
 		tempo = initTempo;
 		return 0;
 	}
-	// contains one verse. play/wait two times for two verses. accepts int* anti-tempo.
+	// accepts int* anti-tempo.
 	static DWORD WINAPI musicGSTQ(LPVOID lpParam = 0)
 	{
 		float initTempo = tempo; if (lpParam != 0) tempo = *(int*)lpParam;
 
-		slBeep(G); slBeep(G); slBeep(A);
-		slBeep(Fsharp, 0.66f); slBeep(G, 2); slBeep(A);
-		slBeep(B); slBeep(B); slBeep(C4);
-		slBeep(B, 0.66f); slBeep(A, 2); slBeep(G);
-		slBeep(A); slBeep(G); slBeep(Fsharp);
-		slBeep(G, 0.33f);
+		std::cout << "God"; slBeep(G); std::cout << " save"; slBeep(G); std::cout << " our"; slBeep(A);
+		std::cout << " gra"; slBeep(Fsharp, 0.66f); std::cout << "cious"; slBeep(G, 2); std::cout << " Queen,\n"; slBeep(A);
+		std::cout << "long"; slBeep(B); std::cout << " live"; slBeep(B); std::cout << " our"; slBeep(C4);
+		std::cout << " no"; slBeep(B, 0.66f); std::cout << "ble"; slBeep(A, 2); std::cout << " Queen,\n"; slBeep(G);
+		std::cout << "God"; slBeep(A); std::cout << " save"; slBeep(G); std::cout << " the"; slBeep(Fsharp);
+		std::cout << " Queen.\n\n"; slBeep(G, 0.33f);
 
-		slBeep(D4); slBeep(D4); slBeep(D4);
-		slBeep(D4, 0.66f); slBeep(C4, 2); slBeep(B);
-		slBeep(C4); slBeep(C4); slBeep(C4);
-		slBeep(C4, 0.66f); slBeep(B, 2); slBeep(A);
-		slBeep(B); slBeep(C4, 2); slBeep(B, 2); slBeep(A, 2); slBeep(G, 2);
-		slBeep(B, 0.66f); slBeep(C4, 2); slBeep(D4);
-		slBeep(E4, 2); slBeep(C4, 2); slBeep(B); slBeep(A);
-		slBeep(G, 0.33f);
+		std::cout << "Send"; slBeep(D4); std::cout << " her"; slBeep(D4); std::cout << " vic"; slBeep(D4);
+		std::cout << "to"; slBeep(D4, 0.66f); std::cout << "ri"; slBeep(C4, 2); std::cout << "ous,\n"; slBeep(B);
+		std::cout << "hap"; slBeep(C4); std::cout << "py"; slBeep(C4); std::cout << " and"; slBeep(C4);
+		std::cout << " glo"; slBeep(C4, 0.66f); std::cout << "ri"; slBeep(B, 2); std::cout << "ous,\n"; slBeep(A);
+		std::cout << "long"; slBeep(B); std::cout << " t"; slBeep(C4, 2); std::cout << "o"; slBeep(B, 2); std::cout << " rei"; slBeep(A, 2); std::cout << "gn"; slBeep(G, 2);
+		std::cout << " o"; slBeep(B, 0.66f); std::cout << "ver"; slBeep(C4, 2); std::cout << " us;\n"; slBeep(D4);
+		std::cout << "Go"; slBeep(E4, 2); std::cout << "d"; slBeep(C4, 2); std::cout << " save"; slBeep(B); std::cout << " the"; slBeep(A);
+		std::cout << " Queen.\n\n"; slBeep(G, 0.33f);
+
+		std::cout << "Thy"; slBeep(G); std::cout << " choic"; slBeep(G); std::cout << "est"; slBeep(A);
+		std::cout << " gifts"; slBeep(Fsharp, 0.66f); std::cout << " in"; slBeep(G, 2); std::cout << " store\n"; slBeep(A);
+		std::cout << "On"; slBeep(B); std::cout << " her"; slBeep(B); std::cout << " be"; slBeep(C4);
+		std::cout << " pleased"; slBeep(B, 0.66f); std::cout << " to"; slBeep(A, 2); std::cout << " pour,\n"; slBeep(G);
+		std::cout << "Long"; slBeep(A); std::cout << " may"; slBeep(G); std::cout << " she"; slBeep(Fsharp);
+		std::cout << " reign.\n\n"; slBeep(G, 0.33f);
+
+		std::cout << "May"; slBeep(D4); std::cout << " she"; slBeep(D4); std::cout << " de"; slBeep(D4);
+		std::cout << "fend"; slBeep(D4, 0.66f); std::cout << " our"; slBeep(C4, 2); std::cout << " laws,\n"; slBeep(B);
+		std::cout << "And"; slBeep(C4); std::cout << " ev"; slBeep(C4); std::cout << "er"; slBeep(C4);
+		std::cout << " give"; slBeep(C4, 0.66f); std::cout << " us"; slBeep(B, 2); std::cout << " cause\n"; slBeep(A);
+		std::cout << "To"; slBeep(B); std::cout << " si"; slBeep(C4, 2); std::cout << "ng"; slBeep(B, 2); std::cout << " wi"; slBeep(A, 2); std::cout << "th"; slBeep(G, 2);
+		std::cout << " heart"; slBeep(B, 0.66f); std::cout << " and"; slBeep(C4, 2); std::cout << " voice;\n"; slBeep(D4);
+		std::cout << "Go"; slBeep(E4, 2); std::cout << "d"; slBeep(C4, 2); std::cout << " save"; slBeep(B); std::cout << " the"; slBeep(A);
+		std::cout << " Queen.\n"; slBeep(G, 0.33f);
+
+		tempo = initTempo;
+		return 0;
+	}
+	// accepts int* anti-tempo.
+	static DWORD WINAPI musicGSTK(LPVOID lpParam = 0)
+	{
+		float initTempo = tempo; if (lpParam != 0) tempo = *(int*)lpParam;
+
+		std::cout << "God"; slBeep(G); std::cout << " save"; slBeep(G); std::cout << " our"; slBeep(A);
+		std::cout << " gra"; slBeep(Fsharp, 0.66f); std::cout << "cious"; slBeep(G, 2); std::cout << " King,\n"; slBeep(A);
+		std::cout << "long"; slBeep(B); std::cout << " live"; slBeep(B); std::cout << " our"; slBeep(C4);
+		std::cout << " no"; slBeep(B, 0.66f); std::cout << "ble"; slBeep(A, 2); std::cout << " King,\n"; slBeep(G);
+		std::cout << "God"; slBeep(A); std::cout << " save"; slBeep(G); std::cout << " the"; slBeep(Fsharp);
+		std::cout << " King.\n\n"; slBeep(G, 0.33f);
+
+		std::cout << "Send"; slBeep(D4); std::cout << " him"; slBeep(D4); std::cout << " vic"; slBeep(D4);
+		std::cout << "to"; slBeep(D4, 0.66f); std::cout << "ri"; slBeep(C4, 2); std::cout << "ous,\n"; slBeep(B);
+		std::cout << "hap"; slBeep(C4); std::cout << "py"; slBeep(C4); std::cout << " and"; slBeep(C4);
+		std::cout << " glo"; slBeep(C4, 0.66f); std::cout << "ri"; slBeep(B, 2); std::cout << "ous,\n"; slBeep(A);
+		std::cout << "long"; slBeep(B); std::cout << " t"; slBeep(C4, 2); std::cout << "o"; slBeep(B, 2); std::cout << " rei"; slBeep(A, 2); std::cout << "gn"; slBeep(G, 2);
+		std::cout << " o"; slBeep(B, 0.66f); std::cout << "ver"; slBeep(C4, 2); std::cout << " us;\n"; slBeep(D4);
+		std::cout << "Go"; slBeep(E4, 2); std::cout << "d"; slBeep(C4, 2); std::cout << " save"; slBeep(B); std::cout << " the"; slBeep(A);
+		std::cout << " King.\n\n"; slBeep(G, 0.33f);
+
+		std::cout << "Thy"; slBeep(G); std::cout << " choic"; slBeep(G); std::cout << "est"; slBeep(A);
+		std::cout << " gifts"; slBeep(Fsharp, 0.66f); std::cout << " in"; slBeep(G, 2); std::cout << " store\n"; slBeep(A);
+		std::cout << "On"; slBeep(B); std::cout << " him"; slBeep(B); std::cout << " be"; slBeep(C4);
+		std::cout << " pleased"; slBeep(B, 0.66f); std::cout << " to"; slBeep(A, 2); std::cout << " pour,\n"; slBeep(G);
+		std::cout << "Long"; slBeep(A); std::cout << " may"; slBeep(G); std::cout << " he"; slBeep(Fsharp);
+		std::cout << " reign.\n\n"; slBeep(G, 0.33f);
+
+		std::cout << "May"; slBeep(D4); std::cout << " he"; slBeep(D4); std::cout << " de"; slBeep(D4);
+		std::cout << "fend"; slBeep(D4, 0.66f); std::cout << " our"; slBeep(C4, 2); std::cout << " laws,\n"; slBeep(B);
+		std::cout << "And"; slBeep(C4); std::cout << " ev"; slBeep(C4); std::cout << "er"; slBeep(C4);
+		std::cout << " give"; slBeep(C4, 0.66f); std::cout << " us"; slBeep(B, 2); std::cout << " cause\n"; slBeep(A);
+		std::cout << "To"; slBeep(B); std::cout << " si"; slBeep(C4, 2); std::cout << "ng"; slBeep(B, 2); std::cout << " wi"; slBeep(A, 2); std::cout << "th"; slBeep(G, 2);
+		std::cout << " heart"; slBeep(B, 0.66f); std::cout << " and"; slBeep(C4, 2); std::cout << " voice;\n"; slBeep(D4);
+		std::cout << "Go"; slBeep(E4, 2); std::cout << "d"; slBeep(C4, 2); std::cout << " save"; slBeep(B); std::cout << " the"; slBeep(A);
+		std::cout << " King.\n"; slBeep(G, 0.33f);
 
 		tempo = initTempo;
 		return 0;
@@ -2876,8 +2934,11 @@ public:
 		case NAUSA:
 			t0 = CreateThread(NULL, 0, musicStarSpangledBanner, b, 0, t);
 			break;
-		case NACommonwealth: case NALichtenstein:
+		case NACommonwealth:
 			t0 = CreateThread(NULL, 0, musicGSTQ, b, 0, t);
+			break;
+		case NALichtenstein:
+			t0 = CreateThread(NULL, 0, musicGSTK, b, 0, t);
 			break;
 		case Dangermouse:
 			t0 = CreateThread(NULL, 0, musicDM, 0, 0, t);
