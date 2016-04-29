@@ -2882,7 +2882,7 @@ public:
 	// AntiTempo will only be applied to National Anthems. GSTQ is typically played faster than other NAs so I'd recommend calling it with 600
     void play(TrackName a, int NatAnthemMSPB = 750)
     {
-		int*b = new int(NatAnthemAntiTempo);
+		int*b = new int(NatAnthemMSPB);
         try { TerminateThread(t0, 0); }
 		catch (...) {}
 		switch (a)
@@ -2958,12 +2958,12 @@ public:
 
 	// Import UltraStar/UltraStarDX/Performous/MyLittleKaraoke lyric text files.
 	//
-	// A lot of these files use C1 as a base and need pitching up. Make unspeed lower to make it play faster.
+	// A lot of these files use C1 as a base and need pitching up.
 	// If a character displays incorrectly, change it in the txt file to be the Unicode character with the code point which corresponds to the code point of the correct character in the code page installed on your machine.
 	void play(char* file, note basenote = C3, float MillisecondsPerBeat = 150.0f)
 	{
 		float previousmspb = mspb;
-		mspb = unspeed;
+		mspb = MillisecondsPerBeat;
 
 		std::ifstream inFile;
 		inFile.open(file);
