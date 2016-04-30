@@ -22,7 +22,7 @@
 //	SoundLib::Instance()->play(SoundLib::AllStar); // play automatically puts the song on a new thread, calling a musicX method directly will hang your program until it finishes
 //  WaitForSingleObject(SoundLib::t0, INFINITE);
 //
-//  SoundLib::Instance()->play("notes.txt", SoundLib::C3, 150); // plays from an UltraStar or compatible text file. does not start song on new thread
+//  SoundLib::Instance()->play("notes.txt", SoundLib::C3); // plays from an UltraStar or compatible text file. does not start song on new thread
 class SoundLib
 {
 private: static float mspb;
@@ -133,15 +133,15 @@ public:
 
 	enum TrackName { SMBDie, SMBWin, NSMBBGM, SMDDie, SMDWin, Sonic1GHZ, ReconstructingMoreScience, YourPreciousMoon, MagicRoundabout, AllStar, Umaru, Futurama, PinkPanther, DarkKnightRises, SMBCastleWin, SMBCastleDie, NARussia, NACommonwealth, NAUSA, NALichtenstein, Dangermouse, Flinstones, Stop };
 
-	static DWORD WINAPI musicSMBDie(LPVOID lpParam = 0) { float previousmspb = mspb; mspb = 600.0f; slBeep(B3, 4); slBeep(F4, 2); slBeep(F4, 4); slBeep(F4, 3); slBeep(E4, 3); slBeep(D4, 3); slBeep(C4, 4); slBeep(E3, 2); slBeep(E3, 4); slBeep(C3, 2); mspb = previousmspb; return 0; }
-	static DWORD WINAPI musicSMBWin(LPVOID lpParam = 0) { float previousmspb = mspb; mspb = 600.0f; slBeep(G2, 3); slBeep(C3, 3); slBeep(E3, 3); slBeep(G3, 3); slBeep(C4, 3); slBeep(E4, 3); slBeep(G4, 1); slBeep(E4, 1); slBeep(Gsharp2, 3); slBeep(C3, 3); slBeep(Dsharp3, 3); slBeep(Gsharp3, 3); slBeep(C4, 3); slBeep(Dsharp4, 3); slBeep(Gsharp4, 1); slBeep(Dsharp4, 1); slBeep(Asharp2, 3); slBeep(D3, 3); slBeep(F3, 3); slBeep(Asharp3, 3); slBeep(D4, 3); slBeep(F4, 3); slBeep(Asharp4, 1); slBeep(Asharp4, 3); slBeep(Asharp4, 3); slBeep(Asharp4, 3); slBeep(C5, 0.5f); mspb = previousmspb; return 0; }
-	static DWORD WINAPI musicSMBCastleDie(LPVOID lpParam = 0) { float previousmspb = mspb; mspb = 550.0f; slBeep(C4, 2); slBeep(R, 2); slBeep(G3, 2); slBeep(R, 2); slBeep(E3, 1); slBeep(A3, 1.5f); slBeep(B3, 1.5f); slBeep(A3, 1.5f); slBeep(Gsharp3, 1.5f); slBeep(Asharp3, 1.5f); slBeep(Gsharp3, 1.5f); slBeep(G3, 4); slBeep(F3, 4); slBeep(G3, 0.5f); mspb = previousmspb; return 0; }
-	static DWORD WINAPI musicSMBCastleWin(LPVOID lpParam = 0) { float previousmspb = mspb; mspb = 400.0f; slBeep(C4, 2); slBeep(G3, 2); slBeep(E3, 2); slBeep(C4, 2); slBeep(G3, 2); slBeep(E3, 2); slBeep(C4, 0.25f); slBeep(Csharp4, 2); slBeep(Gsharp3, 2); slBeep(F3, 2); slBeep(Csharp4, 2); slBeep(Gsharp3, 2); slBeep(F3, 2); slBeep(Csharp4, 0.25f); slBeep(Dsharp4, 2); slBeep(Asharp3, 2); slBeep(G3, 2); slBeep(Dsharp4, 2); slBeep(Asharp3, 2); slBeep(G3, 2); slBeep(Dsharp4, 0.5f); slBeep(F4, 2); slBeep(F4, 2); slBeep(F4, 2); slBeep(G4, 0.25f); mspb = previousmspb; return 0; }
+	static DWORD WINAPI musicSMBDie(LPVOID lpParam = 0) { float previousmspb = mspb; mspb = 600; slBeep(B3, 4); slBeep(F4, 2); slBeep(F4, 4); slBeep(F4, 3); slBeep(E4, 3); slBeep(D4, 3); slBeep(C4, 4); slBeep(E3, 2); slBeep(E3, 4); slBeep(C3, 2); mspb = previousmspb; return 0; }
+	static DWORD WINAPI musicSMBWin(LPVOID lpParam = 0) { float previousmspb = mspb; mspb = 600; slBeep(G2, 3); slBeep(C3, 3); slBeep(E3, 3); slBeep(G3, 3); slBeep(C4, 3); slBeep(E4, 3); slBeep(G4, 1); slBeep(E4, 1); slBeep(Gsharp2, 3); slBeep(C3, 3); slBeep(Dsharp3, 3); slBeep(Gsharp3, 3); slBeep(C4, 3); slBeep(Dsharp4, 3); slBeep(Gsharp4, 1); slBeep(Dsharp4, 1); slBeep(Asharp2, 3); slBeep(D3, 3); slBeep(F3, 3); slBeep(Asharp3, 3); slBeep(D4, 3); slBeep(F4, 3); slBeep(Asharp4, 1); slBeep(Asharp4, 3); slBeep(Asharp4, 3); slBeep(Asharp4, 3); slBeep(C5, 0.5f); mspb = previousmspb; return 0; }
+	static DWORD WINAPI musicSMBCastleDie(LPVOID lpParam = 0) { float previousmspb = mspb; mspb = 550; slBeep(C4, 2); slBeep(R, 2); slBeep(G3, 2); slBeep(R, 2); slBeep(E3, 1); slBeep(A3, 1.5f); slBeep(B3, 1.5f); slBeep(A3, 1.5f); slBeep(Gsharp3, 1.5f); slBeep(Asharp3, 1.5f); slBeep(Gsharp3, 1.5f); slBeep(G3, 4); slBeep(F3, 4); slBeep(G3, 0.5f); mspb = previousmspb; return 0; }
+	static DWORD WINAPI musicSMBCastleWin(LPVOID lpParam = 0) { float previousmspb = mspb; mspb = 400; slBeep(C4, 2); slBeep(G3, 2); slBeep(E3, 2); slBeep(C4, 2); slBeep(G3, 2); slBeep(E3, 2); slBeep(C4, 0.25f); slBeep(Csharp4, 2); slBeep(Gsharp3, 2); slBeep(F3, 2); slBeep(Csharp4, 2); slBeep(Gsharp3, 2); slBeep(F3, 2); slBeep(Csharp4, 0.25f); slBeep(Dsharp4, 2); slBeep(Asharp3, 2); slBeep(G3, 2); slBeep(Dsharp4, 2); slBeep(Asharp3, 2); slBeep(G3, 2); slBeep(Dsharp4, 0.5f); slBeep(F4, 2); slBeep(F4, 2); slBeep(F4, 2); slBeep(G4, 0.25f); mspb = previousmspb; return 0; }
 	static DWORD WINAPI musicNSMBBGM(LPVOID lpParam = 0)
         {
             while (true)
             {
-                mspb = 300.0f;
+                mspb = 300;
                 for (byte b0 = 0; b0 < 2; b0++)
                 {
                     slBeep( ); slBeep(E4, 2); slBeep(G4); slBeep(C5, 2); slBeep(A4); slBeep(G4, 2); slBeep(Dsharp4); slBeep(E4, 2);
@@ -202,12 +202,12 @@ public:
                 slBeep(G1, 2.0f / 3.0f); slBeep(G1, 2.0f / 3.0f); slBeep(A1, 2.0f / 3.0f); slBeep(B1, 2.0f / 3.0f);
             }
         }
-	static DWORD WINAPI musicSMBDieBass(LPVOID lpParam = 0) { mspb = 600.0f; slBeep(G2, 2); slBeep(R, 4); slBeep(G2, 4); slBeep(G2, 3); slBeep(A2, 3); slBeep(B2, 3); slBeep(C3, 2); slBeep(G2, 2); slBeep(C2, 2); return 0; }
+	static DWORD WINAPI musicSMBDieBass(LPVOID lpParam = 0) { mspb = 600; slBeep(G2, 2); slBeep(R, 4); slBeep(G2, 4); slBeep(G2, 3); slBeep(A2, 3); slBeep(B2, 3); slBeep(C3, 2); slBeep(G2, 2); slBeep(C2, 2); return 0; }
 
-	static DWORD WINAPI musicSMDWin(LPVOID lpParam = 0) { float previousmspb = mspb; mspb = 350.0f; slBeep(G3, 2); slBeep(G3, 2); slBeep(C4); slBeep(B3); slBeep(G3, 2); slBeep(G3, 2); slBeep(C4); slBeep(B3); slBeep(G3, 2); slBeep(G3, 2); slBeep(C4); slBeep(B3, 0.5f); slBeep(C5, 2); slBeep(B4, 2); slBeep(G4, 2); slBeep(A4, 0.2f); mspb = previousmspb; return 0; }
+	static DWORD WINAPI musicSMDWin(LPVOID lpParam = 0) { float previousmspb = mspb; mspb = 350; slBeep(G3, 2); slBeep(G3, 2); slBeep(C4); slBeep(B3); slBeep(G3, 2); slBeep(G3, 2); slBeep(C4); slBeep(B3); slBeep(G3, 2); slBeep(G3, 2); slBeep(C4); slBeep(B3, 0.5f); slBeep(C5, 2); slBeep(B4, 2); slBeep(G4, 2); slBeep(A4, 0.2f); mspb = previousmspb; return 0; }
 	static DWORD WINAPI musicS1GHZ(LPVOID lpParam = 0)
 	{
-		float previousmspb = mspb; mspb = 400.0f;
+		float previousmspb = mspb; mspb = 400;
 		slBeep(A4, 4); slBeep(F4, 4); slBeep(A4, 4); slBeep(F4, 4);
 		slBeep(B4, 4); slBeep(G4, 4); slBeep(B4, 4); slBeep(G4, 4);
 		slBeep(C5, 4); slBeep(A4, 4); slBeep(C5, 4); slBeep(A4, 4);
@@ -239,7 +239,7 @@ public:
 
 	static DWORD WINAPI musicReconstructScience(LPVOID lpParam = 0)
         {
-            float previousmspb = mspb; mspb = 600.0f;
+            float previousmspb = mspb; mspb = 600;
             for (byte b0 = 0; b0 < 2; b0++) // this loop pitched up one octave due to poor fish handling
             {
             slBeep(F3, 2); slBeep(C4, 2); slBeep(G3, 2); slBeep(Gsharp3, 2); slBeep(F3, 2); slBeep(C4, 2); slBeep(G3, 2); slBeep(Asharp3, 2);
@@ -266,7 +266,7 @@ public:
         }
 	static DWORD WINAPI musicPreciousMoon(LPVOID lpParam = 0)
         {
-            float previousmspb = mspb; mspb = 600.0f;
+            float previousmspb = mspb; mspb = 600;
             slBeep(F4, 2);
             for (byte b0 = 0; b0 < 14; b0++)
             {
@@ -284,7 +284,7 @@ public:
 
 	static DWORD WINAPI musicMagicRnd(LPVOID lpParam = 0)
     {
-        float previousmspb = mspb; mspb = 500.0f;
+        float previousmspb = mspb; mspb = 500;
         for (byte b0 = 0; b0 < 2; b0++)
         {
             slBeep(C5); slBeep(C5, 2); slBeep(C5, 2); slBeep(G4); slBeep(G4);
@@ -298,7 +298,7 @@ public:
     }
 	static DWORD WINAPI musicUMR(LPVOID lpParam = 0)
 	{
-		float previousmspb = mspb; mspb = 600.0f;
+		float previousmspb = mspb; mspb = 600;
 		slBeep(Fsharp, 4); slBeep(Fsharp, 4); slBeep(Fsharp, 2); slBeep(G, 2);
 		slBeep(A, 1.666f); slBeep(A, 1.666f); slBeep(B, 2); slBeep(A, 2); slBeep(G, 2); slBeep(Fsharp, 2); slBeep(G, 2);
 		slBeep(A, 2); slBeep(A, 4); slBeep(A, 1.666f); slBeep(B, 2); slBeep(A); slBeep(R, 2); slBeep(A, 2);
@@ -356,7 +356,7 @@ public:
 	}
 	static DWORD WINAPI musicFut(LPVOID lpParam = 0)
 	{
-		float previousmspb = mspb; mspb = 600.0f;
+		float previousmspb = mspb; mspb = 600;
 		slBeep(E4, 0.666f); slBeep(E4, 2); slBeep(A4); slBeep(Gsharp4);
 		slBeep(D4, 0.666f); slBeep(D4, 2); slBeep(Fsharp4); slBeep(E4);
 		for (byte b0 = 0; b0 < 2; b0++)
@@ -378,7 +378,7 @@ public:
 	}
 	static DWORD WINAPI musicPP(LPVOID lpParam = 0)
 	{
-		float previousmspb = mspb; mspb = 660.0f;
+		float previousmspb = mspb; mspb = 660;
 		slBeep(Gsharp2, 4); slBeep(A2, 1.666f); slBeep(Asharp2, 4); slBeep(B2, 0.2f);
 		slBeep(Gsharp2, 4); slBeep(A2, 1.666f); slBeep(Asharp2, 4); slBeep(B2, 0.2f);
 		slBeep(Asharp2, 4); slBeep(A2, 1.666f); slBeep(Gsharp2, 4); slBeep(G2, 0.2f);
@@ -406,7 +406,7 @@ public:
 	}
 	static DWORD WINAPI musicDM(LPVOID lpParam = 0)
 	{
-		float previousmspb = mspb; mspb = 380.0f;
+		float previousmspb = mspb; mspb = 380;
 
 		slBeep(E, 1.33f); slBeep(E, 4); slBeep(E, 2.66f); slBeep(E, 1.6f); slBeep(E, 1.33f); slBeep(E, 4); slBeep(R, 2.66f); slBeep(E, 1.6f);
 		slBeep(Gsharp, 1.33f); slBeep(Gsharp, 4); slBeep(Gsharp, 2.66f); slBeep(Gsharp, 1.6f); slBeep(Gsharp, 1.33f); slBeep(Gsharp, 4); slBeep(R, 2.66f); slBeep(Gsharp, 1.6f);
@@ -642,7 +642,7 @@ public:
 
 	static DWORD WINAPI musicAllStar(LPVOID lpParam = 0)
         {
-            float previousmspb = mspb; mspb = 550.0f;
+            float previousmspb = mspb; mspb = 550;
             std::cout << "Some";
             slBeep(Fsharp);
             std::cout << "bo";
@@ -1804,7 +1804,7 @@ public:
 
 	static DWORD WINAPI musicDarkKnight(LPVOID lpParam = 0)
 	{
-		float previousmspb = mspb; mspb = 400.0f;
+		float previousmspb = mspb; mspb = 400;
 
 		printCIA();
 		std::cout << "Doc";		slBeep(F3, 2);
@@ -3425,7 +3425,7 @@ public:
 	// AntiTempo will only be applied to National Anthems. GSTQ is typically played faster than other NAs so I'd recommend calling it with 600
     void play(TrackName a, int NatAnthemMSPB = 750)
     {
-		int*b = new int(NatAnthemAntiTempo);
+		int*b = new int(NatAnthemMSPB);
         try { TerminateThread(t0, 0); }
 		catch (...) {}
 		switch (a)
@@ -3501,12 +3501,12 @@ public:
 
 	// Import UltraStar/UltraStarDX/Performous/MyLittleKaraoke lyric text files.
 	//
-	// A lot of these files use C1 as a base and need pitching up. Make unspeed lower to make it play faster.
+	// A lot of these files use C1 as a base and need pitching up.
 	// If a character displays incorrectly, change it in the txt file to be the Unicode character with the code point which corresponds to the code point of the correct character in the code page installed on your machine.
-	void play(char* file, note basenote = C3, float MillisecondsPerBeat = 150.0f)
+	void play(char* file, note basenote = C3, float tempomultiplier = 1.0f)
 	{
 		float previousmspb = mspb;
-		mspb = unspeed;
+		//mspb = MillisecondsPerBeat;
 
 		std::ifstream inFile;
 		inFile.open(file);
@@ -3557,6 +3557,9 @@ public:
 				}
 				else // debug out the comments
 				{
+					if (input.length() > 4)
+						if (input.substr(0, 4).compare("#BPM") == 0)
+							mspb = (int)(atoi(input.substr(5).c_str()) * 50 / 60) / tempomultiplier;
 					//std::cout << input << "\n";
 				}
 			}
@@ -3602,7 +3605,7 @@ public:
 };
 #endif
 
-float SoundLib::mspb = 600.0f;
+float SoundLib::mspb = 600;
 SoundLib* SoundLib::mInstance = NULL;
 LPDWORD SoundLib::t = 0;
 HANDLE SoundLib::t0 = NULL;
