@@ -2899,10 +2899,9 @@ public:
 	//
 	// A lot of these files use C1 as a base and need pitching up. Make MillisecondsPerBeat lower to make it play faster.
 	//If a character displays incorrectly, change it in the txt file to be the Unicode character with the code point which corresponds to the code point of the correct character in the code page installed on your machine.
-	void play(char* file, note basenote = C3, float MillisecondsPerBeat = 150.0f)
+	void play(char* file, note basenote = C3, float tempomultiplier = 1.0f)
 	{
 		float previousmspb = mspb;
-		mspb = MillisecondsPerBeat;
 
 		std::ifstream inFile;
 		inFile.open(file);
@@ -2949,6 +2948,9 @@ public:
 				}
 				else // debug out the comments
 				{
+					if (input.length() > 4)
+						if (input.substr(0, 4).compare("#BPM") == 0)
+							mspb = (int)(atoi(input.substr(5).c_str()) * 50 / 60) / tempomultiplier;
 					//std::cout << input << "\n";
 				}
 			}
